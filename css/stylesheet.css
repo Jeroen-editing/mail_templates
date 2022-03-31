@@ -1,0 +1,222 @@
+* {
+  margin: 0 0;
+  padding: 0 0; }
+
+body {
+  width: 90%;
+  margin: auto;
+  padding: 2% 5%;
+  background: #e8e8e8; }
+
+header {
+  width: 100%;
+  margin: auto; }
+
+.name {
+  border-bottom: 1px solid #116177; }
+
+h1, h2 {
+  padding: .2rem 0;
+  color: #116177;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem; }
+
+h2 {
+  font-weight: 300; }
+
+h1 {
+  padding: .4rem 0;
+  font-size: 1.2rem;
+  text-align: right; }
+
+.headerSmall {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  width: 100%;
+  border-right: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  margin: 2.6rem 0 0 0;
+  padding: .8rem 0;
+  box-shadow: 1px 1px 2px rgba(212, 212, 212, 0.6); }
+  .headerSmall .company {
+    width: 100%;
+    padding: 5% 3%;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    font-size: 1.4rem;
+    text-align: right; }
+  .headerSmall .firmAddress,
+  .headerSmall .firmTown {
+    width: 100%;
+    padding: 0 3%;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: right; }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 5.5% 0;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 1.3rem; }
+  .content .headerBig {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    width: 26%;
+    height: 7.2rem;
+    margin: 0 auto;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid lightgray;
+    box-shadow: 0 1px 2px rgba(212, 212, 212, 0.6); }
+    .content .headerBig .company {
+      width: 100%;
+      padding-bottom: 3rem;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      text-align: right; }
+    .content .headerBig .firmAddress,
+    .content .headerBig .firmTown {
+      width: 100%;
+      margin: 0 0;
+      padding: 0 0;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      text-align: right; }
+  .content .letter {
+    width: 64%;
+    padding: .55rem 2%;
+    border-left: 1px solid lightgray;
+    box-shadow: inset 1px 0 2px rgba(212, 212, 212, 0.6); }
+    .content .letter .text .addressment {
+      padding: 0 0 1rem 0; }
+    .content .letter .text .paragraph {
+      padding: 0 0 .5rem 0; }
+    .content .letter .greatings {
+      padding: .8rem 0 0 0; }
+      .content .letter .greatings .myName {
+        padding: .5rem 0 0 0; }
+      .content .letter .greatings .telSmall {
+        display: none;
+        padding: .6rem 0 0 0;
+        font-size: .7rem;
+        font-weight: 400; }
+        .content .letter .greatings .telSmall span {
+          margin-right: .2rem;
+          font-size: 1rem; }
+
+.myInfo {
+  width: 100%;
+  margin: 0 0;
+  padding: 0 0; }
+  .myInfo .titleRow,
+  .myInfo .infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 1.2rem;
+    margin: 0 0;
+    padding: .4rem 0; }
+  .myInfo .titleRow {
+    border-bottom: 1px solid #116177; }
+    .myInfo .titleRow .mail,
+    .myInfo .titleRow .tel,
+    .myInfo .titleRow .portfolio {
+      width: 40%;
+      margin: 0 auto;
+      padding: 0 0;
+      color: #116177;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 400;
+      font-size: .9rem;
+      text-align: right; }
+    .myInfo .titleRow .mail {
+      text-align: left; }
+    .myInfo .titleRow .tel {
+      width: 20%; }
+  .myInfo .infoRow .myMail,
+  .myInfo .infoRow .myTel,
+  .myInfo .infoRow .myPF {
+    width: 40%;
+    margin: 0 0;
+    padding: .2rem 0;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 300;
+    font-size: .7rem;
+    text-align: right; }
+  .myInfo .infoRow .myMail {
+    text-align: left; }
+  .myInfo .infoRow .myTel {
+    width: 20%; }
+  .myInfo .infoRow a {
+    width: 100%;
+    color: #1d98ba;
+    text-decoration: none; }
+
+@media (max-width: 660px) {
+  .headerSmall {
+    display: flex; }
+
+  .content {
+    margin-bottom: 2rem;
+    padding: 1.4rem 2% .8rem 2%;
+    border-left: 1px solid lightgray;
+    box-shadow: inset 1px 0 2px rgba(212, 212, 212, 0.6); }
+    .content .letter {
+      box-shadow: none; }
+
+  .content .headerBig {
+    display: none; }
+
+  .content .letter {
+    width: 100%;
+    border-left: none; } }
+@media (max-width: 520px) {
+  .myInfo .titleRow .mail {
+    width: 36%; }
+  .myInfo .titleRow .tel {
+    width: 22%; }
+  .myInfo .titleRow .portfolio {
+    width: 44%; }
+  .myInfo .infoRow .myMail {
+    width: 36%; }
+  .myInfo .infoRow .myTel {
+    width: 22%; }
+  .myInfo .infoRow .myPF {
+    width: 44%; } }
+@media (max-width: 440px) {
+  .content .letter .greatings .telSmall {
+    display: inline; }
+
+  .myInfo .titleRow .mail {
+    width: 40%;
+    padding: 0 0; }
+  .myInfo .titleRow .portfolio {
+    width: 60%;
+    padding: 0 0; }
+  .myInfo .titleRow .tel {
+    display: none; }
+  .myInfo .infoRow .myMail {
+    width: 40%;
+    font-size: .64rem; }
+  .myInfo .infoRow .myPF {
+    width: 60%;
+    font-size: .64rem; }
+  .myInfo .infoRow .myTel {
+    display: none; } }
+
+/*# sourceMappingURL=stylesheet.css.map */
