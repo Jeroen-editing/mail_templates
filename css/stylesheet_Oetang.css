@@ -12,9 +12,6 @@ header {
   width: 100%;
   margin: auto; }
 
-.name {
-  border-bottom: 1px solid #116177; }
-
 h1, h2 {
   padding: .2rem 0;
   color: #116177;
@@ -31,6 +28,18 @@ h1 {
   font-size: 1.2rem;
   text-align: right; }
 
+.name {
+  animation: fadeIn 4s forwards; }
+
+.lineUnder {
+  width: 100%;
+  height: 1px;
+  background: #116177;
+  animation: fadeIn 4s forwards; }
+
+.function {
+  animation: fadeIn 4s forwards; }
+
 .headerSmall {
   display: none;
   flex-direction: column;
@@ -38,15 +47,16 @@ h1 {
   align-items: flex-end;
   align-content: flex-end;
   width: 100%;
-  border-right: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
-  margin: 2.6rem 0 0 0;
-  padding: .8rem 0;
-  box-shadow: 1px 1px 2px rgba(212, 212, 212, 0.6); }
+  border-right: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+  margin: 4rem 0 0 0;
+  padding: .4rem 0;
+  font-family: 'Fredoka', sans-serif;
+  line-height: 1.4rem;
+  animation: moveInLeftLarge 4s, fadeIn 4s; }
   .headerSmall .company {
     width: 100%;
-    padding: 5% 3%;
-    font-family: 'Fredoka', sans-serif;
+    padding: 0 3% 2% 3%;
     font-weight: 300;
     font-size: 1.4rem;
     text-align: right; }
@@ -54,10 +64,17 @@ h1 {
   .headerSmall .firmTown {
     width: 100%;
     padding: 0 3%;
-    font-family: 'Fredoka', sans-serif;
     font-weight: 300;
-    font-size: 1rem;
+    font-size: .9rem;
     text-align: right; }
+  .headerSmall .tav {
+    width: 100%;
+    padding: 3% 3% 0 0;
+    font-size: .9rem;
+    text-align: right; }
+    .headerSmall .tav span {
+      font-size: 1rem;
+      font-weight: 300; }
 
 .content {
   display: flex;
@@ -76,14 +93,15 @@ h1 {
     align-content: flex-end;
     align-items: flex-end;
     width: 22%;
-    height: 7.2rem;
+    height: 8.8rem;
     margin: 2rem 2% 0 0;
     padding: .4rem .4rem .4rem 0;
-    border-bottom: 1px solid lightgray;
-    box-shadow: 0 1px 2px rgba(212, 212, 212, 0.6); }
+    border-bottom: 1px solid #cacaca;
+    box-shadow: 0 1px 2px rgba(212, 212, 212, 0.6);
+    animation: moveInLeft 4s, fadeIn 4s; }
     .content .headerBig .company {
       width: 100%;
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
       font-family: 'Fredoka', sans-serif;
       font-weight: 300;
       font-size: 1.4rem;
@@ -95,14 +113,22 @@ h1 {
       padding: 0 0;
       font-family: 'Fredoka', sans-serif;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: .9rem;
       text-align: right; }
+    .content .headerBig .tav {
+      width: 100%;
+      padding: 10% 0 0 0;
+      font-size: .9rem;
+      text-align: right; }
+      .content .headerBig .tav span {
+        font-size: 1rem;
+        font-weight: 300; }
   .content .letter {
     width: 64%;
     margin: 2rem 0 0 0;
     padding: .6rem 2%;
-    border-left: 1px solid lightgray;
-    box-shadow: inset 1px 0 2px rgba(212, 212, 212, 0.6); }
+    border-left: 1px solid #cacaca;
+    animation: moveInRight 4s forwards, fadeIn 4s forwards; }
     .content .letter .text .addressment {
       padding: 0 0 1.6rem 0; }
     .content .letter .text .paragraph {
@@ -123,7 +149,8 @@ h1 {
 .myInfo {
   width: 100%;
   margin: .2rem 0 0 0;
-  padding: 0 0; }
+  padding: 0 0;
+  animation: fadeIn 8s forwards; }
   .myInfo .titleRow,
   .myInfo .infoRow {
     display: flex;
@@ -169,17 +196,31 @@ h1 {
     color: #1d98ba;
     text-decoration: none; }
 
-@media (max-width: 660px) {
+@media (max-width: 879px) {
+  .pageHeader {
+    animation: moveDown 2s forwards; }
+    .pageHeader .name,
+    .pageHeader .function {
+      animation: none; }
+
   .headerSmall {
-    display: flex; }
+    opacity: 0;
+    display: flex;
+    animation: none;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1.25s; }
 
   .content {
+    opacity: 0;
     margin-bottom: 2rem;
-    padding: 1.4rem 2% .8rem 2%;
+    padding: 1rem 2% .8rem 2%;
     border-left: 1px solid lightgray;
-    box-shadow: inset 1px 0 2px rgba(212, 212, 212, 0.6); }
+    animation: none;
+    animation: fadeIn 3s forwards;
+    animation-delay: 1.25s; }
     .content .letter {
-      box-shadow: none; }
+      box-shadow: none;
+      animation: none; }
 
   .content .headerBig {
     display: none; }
@@ -220,5 +261,31 @@ h1 {
     font-size: .64rem; }
   .myInfo .infoRow .myTel {
     display: none; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes moveInLeft {
+  0% {
+    transform: translateX(-18rem); }
+  20% {
+    transform: translateX(-18rem); }
+  100% {
+    transform: translateX(0); } }
+@keyframes moveInRight {
+  0% {
+    transform: translateX(50rem); }
+  20% {
+    transform: translateX(50rem); }
+  100% {
+    transform: translateX(0); } }
+@keyframes moveDown {
+  0% {
+    transform: translateY(-6rem); }
+  20% {
+    transform: translateY(-6rem); }
+  100% {
+    transform: translateY(0); } }
 
-/*# sourceMappingURL=stylesheet.css.map */
+/*# sourceMappingURL=stylesheet_Oetang.css.map */
