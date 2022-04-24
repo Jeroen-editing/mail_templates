@@ -1,0 +1,198 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+body {
+    width: 90%;
+    margin: auto;
+    padding: 2% 5%;
+    background: rgb(232, 232, 232);
+}
+.pageHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    margin: 0 0;
+    padding: .4rem 5% .45rem 5%;
+    color: #1c5a6b;
+    font-family: 'Jura', sans-serif;
+    background: rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(225, 225, 225);
+    z-index: 1;
+    
+    .name {
+        padding: 0 0 .1rem 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .lineUnder {
+        width: 100%;
+        height: 1px;
+        background: rgba(18, 98, 120, 0.6);
+    }
+    .function {
+        padding: .1rem 0 0 0;
+        font-size: .55rem;
+        font-weight: 600;
+        text-align: right;
+    }
+}
+.content {
+    margin: 6rem 0 0 0;
+
+    p {
+        color: rgb(88,88,88);
+    }
+
+    .section_title {
+        width: 100%;
+        margin: 2rem 0 0 0;
+        border-bottom: 1px solid rgba(28, 90, 107, 0.4);
+        border-left: 1px solid rgba(28, 90, 107, 0.4);
+
+        h3 {
+            margin: 0 0 .3rem 1rem;
+            color: #1c5a6b;
+            font-family: 'Jura', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+    }
+    .chapters {
+        width: 100%;
+        padding: .68rem 0 .2rem 0;
+        border-right: 1px solid rgba(28, 90, 107, 0.4);
+    }
+    .contact_box {
+        .mail_box,
+        .address_box,
+        .phone_box,
+        .linkedin_box,
+        .portfolio_box {
+            width: 96%;
+            margin: 0 auto;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 400;
+            font-size: .8rem;
+        }
+        .sub_title {
+            display: inline-block;
+            min-width: 4.8rem;
+            color: #2d7e94;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .text_box {
+            display: inline-flex;
+            flex-direction: column;
+            margin: .2rem 0 0 0;
+        }
+        .phones {
+            flex-direction: row;
+        }
+        a, p {
+            margin: 0 .4rem .2rem 0;
+        }
+        a {
+            color: rgb(51, 143, 213);
+            text-decoration: none;
+        }
+    }
+    .aboutme_box {
+        .me_box {
+            width: 96%;
+            margin: 0 auto;
+
+            .text_part {
+                margin-bottom: .3rem;
+                font-family: 'Comfortaa', cursive;
+                font-weight: 400;
+                font-size: .85rem;
+                line-height: 1.1rem;
+            }
+        }
+    }
+    .school_box {
+        .becode_box,
+        .encora_box,
+        .online_box,
+        .science_box {
+            width: 96%;
+            margin: .4rem auto;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 400;
+            font-size: .8rem;
+        }
+        .sub_title,
+        .school_name {
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 500;
+        }
+        .sub_title {
+            display: inline-block;
+            min-width: 5.3rem;
+            color: #2d7e94;
+            font-size: .9rem;
+        }
+        .school_name {
+            display: inline-block;
+            color: rgb(88,88,88);
+            font-size: 1rem;
+        }
+        .text_box {
+            margin: .2rem 0 0 0;
+        }
+    }
+    .skills_box {
+        .operating_box,
+        .web_box,
+        .design_box {
+            width: 96%;
+            margin: .4rem auto;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 400;
+            font-size: .8rem;
+        }
+        .sub_title {
+            display: inline-block;
+            min-width: 8.8rem;
+            color: #2d7e94;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            margin: .2rem 0 0 0;
+        }
+        p {
+            margin: 0 .4rem .2rem 0;
+        }
+    }
+}
+
+
+
+
+@media (min-width: 442px) {
+    .content .contact_box .text_box {
+        flex-direction: row;
+
+        a, p {
+            margin: 0 .4rem 0 0;
+        }
+    }
+}
+@media (min-width: 666px) {
+    .content .skills_box .text_box {
+        display: inline-flex;
+    }
+}
+@media (min-width: 984px) {
+    .content .school_box .text_box {
+        display: inline-block;
+    }
+}
