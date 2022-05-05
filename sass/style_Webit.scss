@@ -45,16 +45,16 @@ body {
     align-items: flex-end;
     align-content: flex-end;
     width: 100%;
-    margin: 7rem 0 0 0;
-    padding: .4rem 0;
-    color: rgb(88, 88, 88);
+    margin: 8rem 0 -2px 0;
+    padding: 3% 0;
     font-family: 'Glory', sans-serif;
     line-height: 1.4rem;
-    border-right: 1px solid rgb(212, 212, 212);
+    border-right: 2px solid rgb(212, 212, 212);
 
     .company { 
         width: 100%;
         padding: 0 3% 2% 3%;
+        color: rgb(88, 88, 88);
         font-family: 'Comfortaa', cursive;
         font-weight: 400;
         font-size: 1.2rem;            
@@ -72,11 +72,13 @@ body {
     .tav {
         width: 100%;
         padding: 3% 3% 0 0;
+        color: rgb(150, 150, 150);
         font-size: .9rem;
         font-weight: 300;          
         text-align: right;
 
         span {
+            color: rgb(88, 88, 88);
             font-size: .8rem; 
             font-weight: 400;
             font-family: 'Comfortaa', cursive;
@@ -87,8 +89,9 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
     width: 100%;
-    margin: 0 0 4rem 0;
+    margin: 5rem 0 0 0;
     padding: 5% 0 0 0;
     color: rgb(66, 66, 66);
     font-family: 'Comfortaa', cursive;
@@ -99,21 +102,18 @@ body {
     .headerBig {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        align-content: flex-end;
-        align-items: flex-end;
         width: 20%;
-        height: 8.8rem;
-        margin: 2rem 4% 0 0;
-        padding: .4rem 0 .8rem 0;
-        color: rgb(88, 88, 88);
+        height: 10rem;
+        margin: 40px 4% 0 0;
+        padding: 15px 2px 1% 0;
         font-family: 'Glory', sans-serif;
-        line-height: 1.4rem;
-        border-bottom: 1px solid rgb(212, 212, 212);
+        line-height: 1.55rem;
+        border-bottom: 2px solid rgb(212, 212, 212);
 
         .company {
             width: 100%;
             padding-bottom: 1rem;
+            color: rgb(88, 88, 88);
             font-family: 'Comfortaa', cursive;
             font-weight: 400;
             font-size: 1.2rem;  
@@ -132,11 +132,13 @@ body {
         .tav {
             width: 100%;
             padding: 10% 0 0 0;
+            color: rgb(150, 150, 150);
             font-size: .9rem;
             font-weight: 300;           
             text-align: right;
 
             span {
+                color: rgb(88, 88, 88);
                 font-size: .8rem; 
                 font-weight: 400;
                 font-family: 'Comfortaa', cursive;
@@ -144,10 +146,10 @@ body {
         }
     }
     .letter {
-        width: 64%;
-        margin: 1.5rem 0 0 0;
-        padding: .4rem 2% 0 4%;
-        border-left: 1px solid rgb(212, 212, 212);
+        width: 62%;
+        margin: 2rem 0 0 0;
+        padding: 17px 0 2% 4%;
+        border-left: 2px solid rgb(212, 212, 212);
 
         .text {
             .addressment {
@@ -161,36 +163,44 @@ body {
             padding: .8rem 0 0 0;
 
             .myName {
+                margin: 0 0 1rem 0;
                 padding: .25rem 0 0 0;
                 font-size: .95rem;
             }
-            .telSmall_link {
+            .mailSmall_link {
                 display: none;
                 font-family: 'Glory', sans-serif;
                 text-decoration: none;
 
-                .telSmall {
+                .mailSmall {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
                     padding: 0 0;
-                    color: rgb(51, 143, 213);
-                    font-size: 1rem;
+                    color: #338fd5;
+                    font-size: .8rem;
                     font-weight: 200;
-                    word-spacing: -1px;
+                    //word-spacing: -1px;
 
-                    span {
-                        margin-left: .2rem;
-                        font-size: .8rem;
+                    img {
+                        width: 1.2rem;
+                        margin: 0 .4rem 0 0;
+                        //box-shadow: 1px 1px 1px rgba(141, 141, 141, 0.6), 1px -1px 1px rgba(141, 141, 141, 0.6), -1px 1px 1px rgba(141, 141, 141, 0.6), -1px -1px 1px rgba(141, 141, 141, 0.6);
                     }
                 }
             }
         }
     }
 }
+.space {
+    height: 5rem;
+}
 .myInfo {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 90%;
-    height: 3rem;
+    height: 2.8rem;
     margin: 1rem 0 0 0;
     padding: .3rem 5% 0 5%;
     background: rgb(230, 230, 230);
@@ -211,8 +221,8 @@ body {
         padding: 0 0 .2rem 0;
         border-bottom: 1px solid rgba(18, 98, 120, 0.6);
 
+        .cv,
         .mail,
-        .tel,
         .portfolio {
             width: 36%;
             margin: 0 auto;
@@ -222,36 +232,35 @@ body {
             font-size: .9rem;
             font-weight: 700;
             letter-spacing: 1px;
-            text-align: right;
-        }
-        .mail {
             text-align: left;
         }
-        .tel {
+        .mail {
             width: 28%;
+        }
+        .portfolio {
+            text-align: right;
         }
     }
     .infoRow {
+        align-items: center;
         padding: .1rem 0 .4rem 0;
 
+        .myCV,
         .myMail,
-        .myTel,
         .myPF {
-            width: 31%;
-            margin: 0 0;
+            width: 33%;
+            margin: .2rem 0 0 0;
             padding: .2rem 0;
             font-family: 'Glory', sans-serif;
             font-weight: 200;
-            font-size: 1rem;
-            text-align: right;
-        }
-        .myMail {
+            font-size: .9rem;
             text-align: left;
         }
-        .myTel {
+        .myMail {
             width: 28%;
-            padding-top: .37rem;
-            font-size: .9rem;
+        }
+        .myPF {
+            text-align: right;
         }
         a {
             width: 100%;
@@ -262,21 +271,15 @@ body {
 }
 
 @media (max-width: 870px) {
-    .pageHeader {
-        .name,
-        .function {
-            animation: none;
-        }
-    }
     .headerSmall {
         display: flex;
     }
     .content {
+        margin: 0 0;
         padding: 0 0;
 
         .letter {
             margin: 0 0;
-            animation: none;
         }
     }
     .content .headerBig {
@@ -285,66 +288,37 @@ body {
     .content .letter {
         width: 100%;
         padding-top: 3rem;
-        border-top: 1px solid rgb(212, 212, 212);
+        border-top: 2px solid rgb(212, 212, 212);
     }
 }
-
-@media (max-width: 520px) {
-    .myInfo {
-        .titleRow {
-            .mail {
-                width: 34%;
-            }
-            .tel {
-                width: 28%;
-            }
-            .portfolio {
-                width: 40%;
-            }
-        }
-        .infoRow {
-            .myMail {
-                width: 34%;
-            }
-            .myTel {
-                width: 28%;
-                padding-top: .35rem;
-            }
-            .myPF {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .content .letter .greatings .telSmall_link {
+@media (max-width: 460px) {
+    .content .letter .greatings .mailSmall_link {
         display: inline;
     }
     .myInfo {
         .titleRow {
-            .mail {
+            .cv {
                 width: 40%;
                 padding: 0 0;
+            }
+            .mail {
+                display: none;
             }
             .portfolio {
                 width: 60%;
                 padding: 0 0;
             }
-            .tel {
-                display: none;
-            }
         }
         .infoRow {
-            .myMail {
+            .myCV {
                 width: 40%;
                 font-size: .9rem;
             }
+            .myMail {
+                display: none;
+            }
             .myPF {
                 width: 60%;
-            }
-            .myTel {
-                display: none;
             }
         }
     }

@@ -41,12 +41,12 @@ body {
   align-items: flex-end;
   align-content: flex-end;
   width: 100%;
-  margin: 7rem 0 0 0;
-  padding: .4rem 0;
+  margin: 8rem 0 -2px 0;
+  padding: 3% 0;
   color: #585858;
   font-family: 'Glory', sans-serif;
   line-height: 1.4rem;
-  border-right: 1px solid #d4d4d4; }
+  border-right: 2px solid #d4d4d4; }
   .headerSmall .company {
     width: 100%;
     padding: 0 3% 2% 3%;
@@ -77,8 +77,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
-  margin: 0 0 4rem 0;
+  margin: 5rem 0;
   padding: 5% 0 0 0;
   color: #424242;
   font-family: 'Comfortaa', cursive;
@@ -88,17 +89,14 @@ body {
   .content .headerBig {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
     width: 20%;
-    height: 8.8rem;
-    margin: 2rem 4% 0 0;
-    padding: .4rem 0 .8rem 0;
+    height: 10rem;
+    margin: 40px 4% 0 0;
+    padding: 15px 2px 1% 0;
     color: #585858;
     font-family: 'Glory', sans-serif;
-    line-height: 1.4rem;
-    border-bottom: 1px solid #d4d4d4; }
+    line-height: 1.55rem;
+    border-bottom: 2px solid #d4d4d4; }
     .content .headerBig .company {
       width: 100%;
       padding-bottom: 1rem;
@@ -126,10 +124,10 @@ body {
         font-weight: 400;
         font-family: 'Comfortaa', cursive; }
   .content .letter {
-    width: 64%;
-    margin: 1.5rem 0 0 0;
-    padding: .4rem 2% 0 4%;
-    border-left: 1px solid #d4d4d4; }
+    width: 62%;
+    margin: 40px 0 0 0;
+    padding: 17px 0 2% 4%;
+    border-left: 2px solid #d4d4d4; }
     .content .letter .text .addressment {
       padding: 0 0 1.2rem 0; }
     .content .letter .text .paragraph {
@@ -137,28 +135,34 @@ body {
     .content .letter .greatings {
       padding: .8rem 0 0 0; }
       .content .letter .greatings .myName {
+        margin: 0 0 1rem 0;
         padding: .25rem 0 0 0;
         font-size: .95rem; }
-      .content .letter .greatings .telSmall_link {
+      .content .letter .greatings .mailSmall_link {
         display: none;
         font-family: 'Glory', sans-serif;
         text-decoration: none; }
-        .content .letter .greatings .telSmall_link .telSmall {
+        .content .letter .greatings .mailSmall_link .mailSmall {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
           padding: 0 0;
           color: #338fd5;
-          font-size: 1rem;
-          font-weight: 200;
-          word-spacing: -1px; }
-          .content .letter .greatings .telSmall_link .telSmall span {
-            margin-left: .2rem;
-            font-size: .8rem; }
+          font-size: .8rem;
+          font-weight: 200; }
+          .content .letter .greatings .mailSmall_link .mailSmall img {
+            width: 1.2rem;
+            margin: 0 .4rem 0 0; }
+
+.space {
+  height: 5rem; }
 
 .myInfo {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 90%;
-  height: 3rem;
+  height: 2.8rem;
   margin: 1rem 0 0 0;
   padding: .3rem 5% 0 5%;
   background: #e6e6e6;
@@ -176,8 +180,8 @@ body {
   .myInfo .titleRow {
     padding: 0 0 .2rem 0;
     border-bottom: 1px solid rgba(18, 98, 120, 0.6); }
+    .myInfo .titleRow .cv,
     .myInfo .titleRow .mail,
-    .myInfo .titleRow .tel,
     .myInfo .titleRow .portfolio {
       width: 36%;
       margin: 0 auto;
@@ -187,47 +191,42 @@ body {
       font-size: .9rem;
       font-weight: 700;
       letter-spacing: 1px;
-      text-align: right; }
-    .myInfo .titleRow .mail {
       text-align: left; }
-    .myInfo .titleRow .tel {
+    .myInfo .titleRow .mail {
       width: 28%; }
+    .myInfo .titleRow .portfolio {
+      text-align: right; }
   .myInfo .infoRow {
+    align-items: center;
     padding: .1rem 0 .4rem 0; }
+    .myInfo .infoRow .myCV,
     .myInfo .infoRow .myMail,
-    .myInfo .infoRow .myTel,
     .myInfo .infoRow .myPF {
-      width: 31%;
-      margin: 0 0;
+      width: 33%;
+      margin: .2rem 0 0 0;
       padding: .2rem 0;
       font-family: 'Glory', sans-serif;
       font-weight: 200;
-      font-size: 1rem;
-      text-align: right; }
-    .myInfo .infoRow .myMail {
+      font-size: .9rem;
       text-align: left; }
-    .myInfo .infoRow .myTel {
-      width: 28%;
-      padding-top: .37rem;
-      font-size: .9rem; }
+    .myInfo .infoRow .myMail {
+      width: 28%; }
+    .myInfo .infoRow .myPF {
+      text-align: right; }
     .myInfo .infoRow a {
       width: 100%;
       color: #338fd5;
       text-decoration: none; }
 
 @media (max-width: 870px) {
-  .pageHeader .name,
-  .pageHeader .function {
-    animation: none; }
-
   .headerSmall {
     display: flex; }
 
   .content {
+    margin: 0 0;
     padding: 0 0; }
     .content .letter {
-      margin: 0 0;
-      animation: none; }
+      margin: 0 0; }
 
   .content .headerBig {
     display: none; }
@@ -235,39 +234,25 @@ body {
   .content .letter {
     width: 100%;
     padding-top: 3rem;
-    border-top: 1px solid #d4d4d4; } }
-@media (max-width: 520px) {
-  .myInfo .titleRow .mail {
-    width: 34%; }
-  .myInfo .titleRow .tel {
-    width: 28%; }
-  .myInfo .titleRow .portfolio {
-    width: 40%; }
-  .myInfo .infoRow .myMail {
-    width: 34%; }
-  .myInfo .infoRow .myTel {
-    width: 28%;
-    padding-top: .35rem; }
-  .myInfo .infoRow .myPF {
-    width: 40%; } }
-@media (max-width: 480px) {
-  .content .letter .greatings .telSmall_link {
+    border-top: 2px solid #d4d4d4; } }
+@media (max-width: 460px) {
+  .content .letter .greatings .mailSmall_link {
     display: inline; }
 
-  .myInfo .titleRow .mail {
+  .myInfo .titleRow .cv {
     width: 40%;
     padding: 0 0; }
+  .myInfo .titleRow .mail {
+    display: none; }
   .myInfo .titleRow .portfolio {
     width: 60%;
     padding: 0 0; }
-  .myInfo .titleRow .tel {
-    display: none; }
-  .myInfo .infoRow .myMail {
+  .myInfo .infoRow .myCV {
     width: 40%;
     font-size: .9rem; }
+  .myInfo .infoRow .myMail {
+    display: none; }
   .myInfo .infoRow .myPF {
-    width: 60%; }
-  .myInfo .infoRow .myTel {
-    display: none; } }
+    width: 60%; } }
 
-/*# sourceMappingURL=stylesheet.css.map */
+/*# sourceMappingURL=stylesheet_motivation.css.map */

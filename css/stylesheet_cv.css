@@ -17,13 +17,23 @@ body {
   padding: .4rem 5% .45rem 5%;
   color: #1c5a6b;
   font-family: 'Jura', sans-serif;
-  background: #e6e6e6;
-  border-bottom: 1px solid #e1e1e1;
+  background: #e2e2e2;
+  border-bottom: 1px solid gainsboro;
   z-index: 1; }
-  .pageHeader .name {
-    padding: 0 0 .1rem 0;
-    font-size: 1rem;
-    font-weight: 600; }
+  .pageHeader .name_cv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 0 0 .1rem 0; }
+    .pageHeader .name_cv .name {
+      font-size: 1.3rem;
+      font-weight: 600; }
+    .pageHeader .name_cv .cv {
+      color: #585858;
+      font-size: .9rem;
+      font-weight: 400; }
   .pageHeader .lineUnder {
     width: 100%;
     height: 1px;
@@ -44,7 +54,7 @@ body {
     border-bottom: 1px solid rgba(28, 90, 107, 0.4);
     border-left: 1px solid rgba(28, 90, 107, 0.4); }
     .content .section_title h3 {
-      margin: 0 0 .3rem 1rem;
+      margin: 0 0 .3rem .6rem;
       color: #1c5a6b;
       font-family: 'Jura', sans-serif;
       font-size: 1.1rem;
@@ -53,95 +63,344 @@ body {
     width: 100%;
     padding: .68rem 0 .2rem 0;
     border-right: 1px solid rgba(28, 90, 107, 0.4); }
-  .content .contact_box .mail_box,
-  .content .contact_box .address_box,
-  .content .contact_box .phone_box,
-  .content .contact_box .linkedin_box,
-  .content .contact_box .portfolio_box {
-    width: 96%;
-    margin: 0 auto;
-    font-family: 'Comfortaa', cursive;
-    font-weight: 400;
-    font-size: .8rem; }
-  .content .contact_box .sub_title {
-    display: inline-block;
-    min-width: 4.8rem;
-    color: #2d7e94;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1rem;
-    font-weight: 500; }
-  .content .contact_box .text_box {
-    display: inline-flex;
-    flex-direction: column;
-    margin: .2rem 0 0 0; }
-  .content .contact_box .phones {
-    flex-direction: row; }
-  .content .contact_box a, .content .contact_box p {
-    margin: 0 .4rem .2rem 0; }
-  .content .contact_box a {
-    color: #338fd5;
-    text-decoration: none; }
-  .content .aboutme_box .me_box {
-    width: 96%;
-    margin: 0 auto; }
-    .content .aboutme_box .me_box .text_part {
-      margin-bottom: .3rem;
+  .content .contact_box {
+    margin: 0 auto 3rem auto; }
+    .content .contact_box .mail_box,
+    .content .contact_box .address_box,
+    .content .contact_box .phone_box,
+    .content .contact_box .linkedin_box,
+    .content .contact_box .portfolio_box {
+      width: 96%;
+      margin: .2rem auto;
       font-family: 'Comfortaa', cursive;
       font-weight: 400;
-      font-size: .85rem;
-      line-height: 1.1rem; }
-  .content .school_box .becode_box,
-  .content .school_box .encora_box,
-  .content .school_box .online_box,
-  .content .school_box .science_box {
+      font-size: .8rem; }
+    .content .contact_box .sub_title {
+      display: inline-block;
+      min-width: 4.8rem;
+      color: #2d7e94;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1rem;
+      font-weight: 500; }
+    .content .contact_box .text_box {
+      display: inline-flex;
+      flex-direction: column;
+      margin: .2rem 0 0 0; }
+    .content .contact_box .phones {
+      flex-direction: row; }
+    .content .contact_box a, .content .contact_box p {
+      margin: 0 .4rem .2rem 0; }
+    .content .contact_box a {
+      color: #338fd5;
+      text-decoration: none; }
+  .content .aboutme_box {
+    margin: 0 auto 3rem auto; }
+    .content .aboutme_box .me_box {
+      display: flex;
+      flex-direction: row;
+      width: 96%;
+      margin: .4rem auto; }
+      .content .aboutme_box .me_box .aside_photo {
+        display: none;
+        width: 7rem;
+        height: 8.8rem;
+        margin-right: .4rem;
+        border: 1px solid #b4b4b4; }
+      .content .aboutme_box .me_box .text_box {
+        width: 100%;
+        max-width: 750px; }
+        .content .aboutme_box .me_box .text_box .text_part {
+          margin-bottom: .3rem;
+          font-family: 'Comfortaa', cursive;
+          font-weight: 400;
+          font-size: .85rem;
+          line-height: 1.1rem; }
+          .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+            display: inline;
+            float: left;
+            width: 32%;
+            max-width: 7rem;
+            margin-right: .4rem;
+            border: 1px solid #b4b4b4; }
+  .content .school_box {
+    margin: 0 auto 3rem auto; }
+    .content .school_box .becode_box,
+    .content .school_box .encora_box,
+    .content .school_box .online_box,
+    .content .school_box .science_box {
+      width: 96%;
+      margin: .4rem auto;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 400;
+      font-size: .8rem; }
+    .content .school_box .encora_box,
+    .content .school_box .online_box {
+      margin: .8rem auto; }
+    .content .school_box .sub_title,
+    .content .school_box .school_name {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 500; }
+    .content .school_box .sub_title {
+      display: inline-block;
+      min-width: 5.3rem;
+      color: #2d7e94;
+      font-size: .9rem; }
+    .content .school_box .school_name {
+      display: inline-block;
+      color: #585858;
+      font-size: 1rem; }
+    .content .school_box .text_box {
+      margin: .2rem 0 0 0; }
+  .content .skills_box {
+    margin: 0 auto 3rem auto; }
+    .content .skills_box .operating_box,
+    .content .skills_box .web_box,
+    .content .skills_box .design_box {
+      width: 96%;
+      margin: .4rem auto;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 400;
+      font-size: .8rem; }
+    .content .skills_box .web_box {
+      margin: .8rem auto; }
+    .content .skills_box .sub_title {
+      display: inline-block;
+      min-width: 8.8rem;
+      color: #2d7e94;
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1rem;
+      font-weight: 500; }
+    .content .skills_box .text_box {
+      display: flex;
+      flex-direction: column;
+      margin: .2rem 0 0 0; }
+      .content .skills_box .text_box .skills_list {
+        list-style: none;
+        list-style-image: url();
+        color: #585858; }
+        .content .skills_box .text_box .skills_list li {
+          display: flex;
+          flex-direction: row;
+          margin: .2rem 0 0 0; }
+        .content .skills_box .text_box .skills_list .list_square {
+          width: .5rem;
+          height: .5rem;
+          margin: .25rem .4rem 0 0;
+          opacity: .8; }
+    .content .skills_box p {
+      margin: 0 .4rem .2rem 0; }
+  .content .softSkills_box {
+    margin: 0 auto 3rem auto; }
+    .content .softSkills_box .skills_list_box {
+      display: flex;
+      flex-direction: column;
+      width: 96%;
+      margin: .4rem auto; }
+      .content .softSkills_box .skills_list_box .skills_list {
+        list-style: none;
+        list-style-image: url();
+        color: #585858; }
+        .content .softSkills_box .skills_list_box .skills_list li {
+          display: flex;
+          flex-direction: row;
+          margin: .2rem 0 0 0; }
+        .content .softSkills_box .skills_list_box .skills_list .list_square {
+          width: .5rem;
+          height: .5rem;
+          margin: .25rem .4rem 0 0;
+          opacity: .8; }
+    .content .softSkills_box p {
+      margin: 0 .4rem .2rem 0;
+      color: #585858;
+      font-family: 'Comfortaa', cursive;
+      font-size: .8rem; }
+  .content .languages_box {
+    margin: 0 auto 3rem auto; }
+    .content .languages_box .table_box {
+      padding: .4rem 0 .2rem 0; }
+      .content .languages_box .table_box .languages_table {
+        width: 94%;
+        max-width: 800px;
+        margin: .4rem 0 0 .6rem;
+        border-collapse: collapse; }
+        .content .languages_box .table_box .languages_table th, .content .languages_box .table_box .languages_table td {
+          width: 33%; }
+          .content .languages_box .table_box .languages_table th p, .content .languages_box .table_box .languages_table td p {
+            min-width: 5.5rem;
+            text-align: center; }
+        .content .languages_box .table_box .languages_table th {
+          border-bottom: 1px solid rgba(128, 128, 128, 0.6); }
+          .content .languages_box .table_box .languages_table th p {
+            padding: 0 0 .2rem 0;
+            color: #2d7e94;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 400; }
+        .content .languages_box .table_box .languages_table td p {
+          padding: .4rem 0 0 0;
+          color: #585858;
+          font-family: 'Comfortaa', cursive;
+          font-size: .9rem;
+          font-weight: 600; }
+        .content .languages_box .table_box .languages_table .middle {
+          border-right: 1px solid rgba(128, 128, 128, 0.2);
+          border-left: 1px solid rgba(128, 128, 128, 0.2); }
+  .content .work_box .woonpunt_box,
+  .content .work_box .editor_box,
+  .content .work_box .museum_box {
     width: 96%;
     margin: .4rem auto;
     font-family: 'Comfortaa', cursive;
     font-weight: 400;
     font-size: .8rem; }
-  .content .school_box .sub_title,
-  .content .school_box .school_name {
+  .content .work_box .editor_box {
+    margin: .8rem auto; }
+  .content .work_box .sub_title,
+  .content .work_box .work_name {
     font-family: 'Fredoka', sans-serif;
     font-weight: 500; }
-  .content .school_box .sub_title {
+  .content .work_box .sub_title {
     display: inline-block;
     min-width: 5.3rem;
     color: #2d7e94;
     font-size: .9rem; }
-  .content .school_box .school_name {
-    display: inline-block;
+  .content .work_box .work_name {
+    display: block;
     color: #585858;
     font-size: 1rem; }
-  .content .school_box .text_box {
+  .content .work_box .text_box {
     margin: .2rem 0 0 0; }
-  .content .skills_box .operating_box,
-  .content .skills_box .web_box,
-  .content .skills_box .design_box {
-    width: 96%;
-    margin: .4rem auto;
-    font-family: 'Comfortaa', cursive;
-    font-weight: 400;
-    font-size: .8rem; }
-  .content .skills_box .sub_title {
-    display: inline-block;
-    min-width: 8.8rem;
-    color: #2d7e94;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1rem;
-    font-weight: 500; }
-  .content .skills_box .text_box {
-    display: flex;
-    flex-direction: column;
-    margin: .2rem 0 0 0; }
-  .content .skills_box p {
-    margin: 0 .4rem .2rem 0; }
+    .content .work_box .text_box .work_list {
+      list-style: none;
+      list-style-image: url();
+      color: #585858; }
+      .content .work_box .text_box .work_list li {
+        display: flex;
+        flex-direction: row;
+        margin: .2rem 0 0 0; }
+      .content .work_box .text_box .work_list .list_square {
+        width: .5rem;
+        height: .5rem;
+        margin: .25rem .4rem 0 0;
+        opacity: .8; }
+  .content .hobby_box {
+    margin: 0 auto 3rem auto; }
+    .content .hobby_box .hobbies_box {
+      display: flex;
+      flex-direction: column;
+      width: 96%;
+      margin: .4rem auto; }
+      .content .hobby_box .hobbies_box .hobbies_list {
+        list-style: none;
+        list-style-image: url();
+        color: #585858; }
+        .content .hobby_box .hobbies_box .hobbies_list li {
+          display: flex;
+          flex-direction: row;
+          margin: .2rem 0 0 0; }
+        .content .hobby_box .hobbies_box .hobbies_list .list_square {
+          width: .5rem;
+          height: .5rem;
+          margin: .25rem .4rem 0 0;
+          opacity: .8; }
+    .content .hobby_box p {
+      margin: 0 .4rem .2rem 0;
+      color: #585858;
+      font-family: 'Comfortaa', cursive;
+      font-size: .8rem; }
 
+.myInfo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  height: 2.4rem;
+  margin: 1rem 0 0 0;
+  padding: .2rem 5% 0 5%;
+  background: #e2e2e2;
+  border-top: 1px solid gainsboro;
+  z-index: 1; }
+  .myInfo .titleRow,
+  .myInfo .infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 1rem;
+    margin: 0 0;
+    padding: 0 0; }
+  .myInfo .titleRow {
+    padding: 0 0 .1rem 0;
+    border-bottom: 1px solid rgba(18, 98, 120, 0.6); }
+    .myInfo .titleRow .mail,
+    .myInfo .titleRow .portfolio {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0 0;
+      color: #1c5a6b;
+      font-family: 'Jura', sans-serif;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-align: right; }
+    .myInfo .titleRow .mail {
+      text-align: left; }
+    .myInfo .titleRow .tel {
+      width: 28%; }
+  .myInfo .infoRow {
+    padding: 0 0; }
+    .myInfo .infoRow .myMail,
+    .myInfo .infoRow .myPF {
+      width: 50%;
+      margin: 0 0;
+      padding: .2rem 0;
+      font-family: 'Comfortaa', cursive;
+      font-weight: 200;
+      font-size: .6rem;
+      text-align: right; }
+    .myInfo .infoRow .myMail {
+      text-align: left; }
+    .myInfo .infoRow .myTel {
+      width: 28%;
+      padding-top: .37rem;
+      font-size: .9rem; }
+    .myInfo .infoRow a {
+      width: 100%;
+      color: #338fd5;
+      text-decoration: none; }
+
+@media (min-width: 340px) {
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 29%; } }
+@media (min-width: 350px) {
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 28%; } }
+@media (min-width: 370px) {
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 26%; } }
 @media (min-width: 442px) {
   .content .contact_box .text_box {
     flex-direction: row; }
     .content .contact_box .text_box a, .content .contact_box .text_box p {
-      margin: 0 .4rem 0 0; } }
-@media (min-width: 666px) {
+      margin: 0 .4rem 0 0; }
+
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 24.5%; }
+
+  .content .work_box .work_name {
+    display: inline-block; } }
+@media (min-width: 460px) {
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 23.5%; } }
+@media (min-width: 540px) {
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    width: 20%; } }
+@media (min-width: 684px) {
+  .content .aboutme_box .me_box .aside_photo {
+    display: inline-block; }
+
+  .content .aboutme_box .me_box .text_box .text_part .inline_photo {
+    display: none; }
+
   .content .skills_box .text_box {
     display: inline-flex; } }
 @media (min-width: 984px) {
