@@ -337,7 +337,7 @@ body {
     margin: 0 auto;
     padding: 0 0; }
   .myInfo .titleRow {
-    padding: 0 0 .1rem 0;
+    padding: 0 0 .12rem 0;
     border-bottom: 1px solid rgba(18, 98, 120, 0.6); }
     .myInfo .titleRow .mail,
     .myInfo .titleRow .portfolio {
