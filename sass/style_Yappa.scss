@@ -4,7 +4,8 @@
 }
 body {
     width: 90%;
-    margin: auto;
+    max-width: 1280px;
+    margin: 0 auto;
     padding: 2% 5%;
     background: rgb(232, 232, 232);
 }
@@ -13,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 90%;
-    margin: 0 0;
+    margin: 0 auto;
     padding: .4rem 5% .4rem 5%;
     color: #1c5a6b;
     font-family: 'Jura', sans-serif;
@@ -106,8 +107,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     width: 100%;
-    max-width: 1200px;
-    margin: 5rem auto 0 auto;
+    margin: 5rem 0 0 0;
     padding: 5% 0 0 0;
     color: rgb(66, 66, 66);
     font-family: 'Comfortaa', cursive;
@@ -119,8 +119,7 @@ body {
         display: flex;
         flex-direction: column;
         width: 20%;
-        height: 10rem;
-        margin: 40px 4% 0 0;
+        margin: 32px 4% 0 0;
         padding: 15px 2px 1% 0;
         font-family: 'Glory', sans-serif;
         line-height: 1.55rem;
