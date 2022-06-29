@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sollicitatie</title>
+
+    <link rel="stylesheet" href="css/stylesheet_cv.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Expletus+Sans:wght@400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Genos:wght@100;200;300;400;500;600;700;800;900&family=Glory:wght@100;200;300;400;500;600;700;800&family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="dropdownBackground">
+            <div class="droparrow"></div>
+        </div>
+        <div class="selectdrop">
+            <a href="mailto:jdv.editing@gmail.com?subject=Saw your portfolio." class="nav_link gmail drop">
+                <img src="assets/cv/gmail.png" class="icon gmail_icon" alt="gmail logo">
+                <p class="nav_text">mail me</p>
+                <div class="dropdown">
+                    <p class="check_out">
+                        If you are interested in my work
+                        <br>or have questions:
+                        <span> just mail me!</span>
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/" class="nav_link linkedin drop">
+                <p class="nav_text">my LinkedIn</p>
+                <img src="assets/cv/linkedin.png" class="icon linkedin_icon" alt="LinkedIn logo">
+                <div class="dropdown">
+                    <p class="check_out">
+                        Where you can contact me to
+                        <br>if you don't like to mail me personaly.
+                        <br><span>Check my linkedIn page.</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <header class="page_header">
+            <div class="header_bg">
+                <div class="header_content">
+                    <section class="header_flex">
+                        <div class="page_title">
+                            <h2 class="name">
+                                Jeroen De Vos
+                            </h2>
+                            <h1 class="cv">
+                                My resume
+                            </h1>
+                        </div>
+                        <div class="page_photo">
+                            <img src="assets/cv/Jeroen.png" alt="my profile photo" class="myPhoto">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </header>
+        <main class="mainpage">
+            <section class="section_box box_visible" id="info_section">
+                <header class="section_title">
+                    <h2>Info sections</h2>
+                </header>
+                <section class="chapters">
+                    <article class="chapter" id="getInfo">
+                        <header class="chapter_title">
+                            <h3>
+                                Personal info.
+                            </h3>
+                        </header>
+                        <section class="chapter_button">
+                            <button>
+                                <p>Open</p>
+                                <img src="assets/cv/arrow_right_white.png" alt="arrow right" id="info_arrow">
+                            </button>
+                        </section>
+                    </article>
+                    <article class="chapter" id="getSkills">
+                        <header class="chapter_title">
+                            <h3>
+                                Skills.
+                            </h3>
+                        </header>
+                        <section class="chapter_button">
+                            <button>
+                                <p>Open</p>
+                                <img src="assets/cv/arrow_right_white.png" alt="arrow right" id="skills_arrow">
+                            </button>
+                        </section>
+                    </article>
+                    <article class="chapter" id="getEducation">
+                        <header class="chapter_title">
+                            <h3>
+                                Education.
+                            </h3>
+                        </header>
+                        <section class="chapter_button">
+                            <button>
+                                <p>Open</p>
+                                <img src="assets/cv/arrow_right_white.png" alt="arrow right" id="school_arrow">
+                            </button>
+                        </section>
+                    </article>
+                    <article class="chapter" id="getExp">
+                        <header class="chapter_title">
+                            <h3>
+                                Experiences.
+                            </h3>
+                        </header>
+                        <section class="chapter_button">
+                            <button>
+                                <p>Open</p>
+                                <img src="assets/cv/arrow_right_white.png" alt="arrow right" id="exp_arrow">
+                            </button>
+                        </section>
+                    </article>
+                </section>
+            </section>
+            <section class="pop_up box_hidden" id="pop_up">
+            </section>
+        </main>
+    </div>
+
+    <script src="chapters.js"></script>
+</body>

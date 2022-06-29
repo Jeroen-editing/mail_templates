@@ -1,0 +1,485 @@
+* {
+  margin: 0 0;
+  padding: 0 0; }
+
+body {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 0; }
+
+.pageHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: .4rem 0 .4rem 0;
+  color: #2d7e94;
+  font-family: 'Jura', sans-serif;
+  background: #f2f2f2;
+  border-bottom: 1px solid gainsboro;
+  border-right: 1px solid rgba(140, 163, 163, 0.4);
+  border-left: 1px solid rgba(140, 163, 163, 0.4);
+  z-index: 1; }
+  .pageHeader .name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 94%;
+    max-width: 94%;
+    margin: 0 auto;
+    padding: 0 0 .15rem 0; }
+    .pageHeader .name .name {
+      font-size: 1.3rem;
+      font-weight: 600; }
+  .pageHeader .lineUnder {
+    width: 94%;
+    max-width: 94%;
+    height: 1px;
+    margin: 0 auto;
+    background: rgba(18, 98, 120, 0.6); }
+  .pageHeader .function {
+    width: 94%;
+    max-width: 94%;
+    margin: 0 auto;
+    padding: .1rem 0 0 0;
+    color: #686868;
+    font-size: .55rem;
+    font-weight: 600;
+    text-align: right; }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-content: flex-end;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20% 0 4% 0;
+  color: #444444;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 1.3rem;
+  background: rgba(140, 163, 163, 0.08);
+  border-right: 1px solid rgba(140, 163, 163, 0.4);
+  border-left: 1px solid rgba(140, 163, 163, 0.4); }
+  .main .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 96%;
+    max-width: 96%;
+    margin: 0 0 0 auto;
+    padding: 1.2rem 0 0 0; }
+    .main .header .company_box {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 70%;
+      max-width: 70%;
+      height: 11.5rem;
+      margin: 0 0;
+      padding: 1.6rem 0 0 0;
+      background: rgba(140, 163, 163, 0.08);
+      border: 1px solid rgba(28, 48, 48, 0.4);
+      border-bottom: none;
+      box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset 2px -2px 3px 0 rgba(43, 73, 73, 0.2); }
+      .main .header .company_box .company {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-content: flex-end;
+        width: 94.5%;
+        max-width: 94.5%;
+        margin: 0 0;
+        padding: .8rem 0;
+        font-family: 'Glory', sans-serif;
+        line-height: 1.55rem;
+        background: white;
+        border: 1px solid rgba(28, 90, 107, 0.4);
+        border-right: none;
+        border-bottom: none;
+        box-shadow: -1px -1px 2px 0 rgba(119, 140, 166, 0.4), -1px 1px 2px 0 rgba(119, 140, 166, 0.4); }
+        .main .header .company_box .company .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          width: 92%;
+          max-width: 92%;
+          margin: 0 auto;
+          padding: .8rem 0; }
+          .main .header .company_box .company .text .company_name {
+            width: 100%;
+            padding-bottom: 1rem;
+            color: #585858;
+            font-family: 'Comfortaa', cursive;
+            font-weight: 400;
+            font-size: 1.2rem;
+            text-align: right; }
+          .main .header .company_box .company .text .company_address,
+          .main .header .company_box .company .text .company_town {
+            width: 100%;
+            margin: 0 0;
+            padding: 0 0;
+            color: #969696;
+            font-weight: 300;
+            font-size: .9rem;
+            text-align: right; }
+          .main .header .company_box .company .text .tav {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            padding: 10% 0 0 0;
+            color: #969696;
+            font-size: .9rem;
+            font-weight: 300;
+            text-align: right; }
+            .main .header .company_box .company .text .tav span {
+              margin: 0 0 0 .6rem;
+              color: #585858;
+              font-size: .8rem;
+              font-weight: 400;
+              font-family: 'Comfortaa', cursive; }
+  .main .article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 98%;
+    max-width: 98%;
+    margin: 0 0 0 auto;
+    padding: 0 0 1.2rem 0;
+    z-index: 1; }
+    .main .article .letter_box {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0;
+      padding: 1.6rem 0;
+      background: rgba(140, 163, 163, 0.08);
+      border: 1px solid rgba(28, 48, 48, 0.4);
+      box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset 2px -2px 3px 0 rgba(43, 73, 73, 0.2); }
+      .main .article .letter_box .letter {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 96.5%;
+        max-width: 96.5%;
+        margin: 0 0;
+        padding: .8rem 0;
+        background: white;
+        border: 1px solid rgba(28, 90, 107, 0.4);
+        border-right: none;
+        box-shadow: -1px 1px 2px 0 rgba(119, 140, 166, 0.4), -1px -1px 2px 0 rgba(119, 140, 166, 0.4); }
+        .main .article .letter_box .letter .text {
+          width: 94%;
+          max-width: 94%;
+          margin: 0 auto;
+          padding: 1.2rem 0;
+          color: #444444; }
+          .main .article .letter_box .letter .text .addressment {
+            padding: 0 0 1.2rem 0; }
+          .main .article .letter_box .letter .text .paragraph {
+            padding: 0 0 .5rem 0; }
+        .main .article .letter_box .letter .greatings {
+          width: 90%;
+          max-width: 90%;
+          margin: 0 0 0 2rem;
+          padding: 1.2rem 0; }
+          .main .article .letter_box .letter .greatings .myName {
+            margin: 0 0 1rem 0;
+            padding: .25rem 0 0 0;
+            font-size: .95rem; }
+          .main .article .letter_box .letter .greatings .mailSmall_link {
+            display: none;
+            font-family: 'Glory', sans-serif;
+            text-decoration: none; }
+            .main .article .letter_box .letter .greatings .mailSmall_link .mailSmall {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 0 0;
+              color: #328fc2;
+              font-size: .8rem;
+              font-weight: 200; }
+              .main .article .letter_box .letter .greatings .mailSmall_link .mailSmall img {
+                width: 1.2rem;
+                margin: 0 .4rem 0 0; }
+
+.myInfo {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: .6rem 0 .4rem 0;
+  color: #2d7e94;
+  font-family: 'Jura', sans-serif;
+  background: #f2f2f2;
+  border-top: 1px solid gainsboro;
+  border-right: 1px solid rgba(140, 163, 163, 0.4);
+  border-left: 1px solid rgba(140, 163, 163, 0.4);
+  z-index: 1; }
+  .myInfo .titleRow,
+  .myInfo .infoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 94%;
+    max-width: 94%;
+    margin: 0 auto;
+    padding: 0 0; }
+  .myInfo .titleRow {
+    height: .9rem;
+    padding: 0 0 .3rem 0;
+    border-bottom: 1px solid rgba(18, 98, 120, 0.6); }
+    .myInfo .titleRow .cv,
+    .myInfo .titleRow .mail,
+    .myInfo .titleRow .portfolio {
+      width: 50%;
+      margin: 0 auto;
+      padding: 0 0;
+      color: #1c5a6b;
+      font-family: 'Jura', sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-align: left; }
+    .myInfo .titleRow .mail {
+      display: none; }
+    .myInfo .titleRow .portfolio {
+      text-align: right; }
+  .myInfo .infoRow {
+    align-items: center;
+    height: .8rem;
+    padding: .2rem 0 0 0; }
+    .myInfo .infoRow .myCV,
+    .myInfo .infoRow .myMail,
+    .myInfo .infoRow .myPF {
+      width: 50%;
+      margin: .2rem 0 0 0;
+      padding: .2rem 0;
+      font-family: 'Glory', sans-serif;
+      font-weight: 200;
+      font-size: .9rem;
+      text-align: left; }
+    .myInfo .infoRow .myMail {
+      display: none; }
+    .myInfo .infoRow .myPF {
+      text-align: right; }
+    .myInfo .infoRow a {
+      width: 100%;
+      color: #338fd5;
+      text-decoration: none; }
+
+@media (min-width: 600px) {
+  .myInfo .titleRow .cv {
+    width: 33%;
+    padding: 0 0; }
+  .myInfo .titleRow .mail {
+    display: block;
+    width: 33%;
+    padding: 0 0; }
+  .myInfo .titleRow .portfolio {
+    width: 33%;
+    padding: 0 0; }
+  .myInfo .infoRow .myCV {
+    width: 33%;
+    font-size: .9rem; }
+  .myInfo .infoRow .myMail {
+    display: block;
+    width: 33%; }
+  .myInfo .infoRow .myPF {
+    width: 33%; }
+
+  .main .article .letter_box .letter .greatings .mailSmall_link {
+    display: none; } }
+@media (min-width: 600px) {
+  .main .header {
+    width: 92%;
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 1.2rem 0 0 0; }
+    .main .header .company_box {
+      width: 50%;
+      max-width: 50%;
+      height: 13.3rem;
+      margin: 0 0;
+      padding: 1.8rem 0 0 0; }
+      .main .header .company_box .company {
+        width: 92.5%;
+        max-width: 92%;
+        margin: 0 0; }
+        .main .header .company_box .company .text {
+          margin: 0 1.8rem 0 0; }
+  .main .article {
+    width: 92%;
+    max-width: 92%;
+    padding: 0 0;
+    margin: 0 auto; }
+    .main .article .letter_box {
+      width: 100%;
+      max-width: 100%;
+      padding: 2.2rem 0; }
+      .main .article .letter_box .letter {
+        width: 96%;
+        max-width: 96%; }
+        .main .article .letter_box .letter .text {
+          width: 90%;
+          max-width: 90%;
+          margin: 0 auto; } }
+@media (min-width: 768px) {
+  .main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start; }
+    .main .header {
+      width: 35%;
+      max-width: 35%; }
+      .main .header .company_box {
+        width: 89%;
+        max-width: 89%;
+        height: 13.3rem;
+        margin: 1.3rem 0 0 0;
+        border: 1px solid rgba(28, 48, 48, 0.4);
+        border-right: none; }
+        .main .header .company_box .company {
+          width: 91.5%;
+          max-width: 91.5%;
+          border: 1px solid rgba(28, 90, 107, 0.4);
+          border-right: none; }
+          .main .header .company_box .company .text {
+            align-items: flex-end;
+            align-content: flex-end;
+            width: 96%;
+            max-width: 96%;
+            margin: 0 1rem 0 0; }
+    .main .article {
+      justify-content: flex-start;
+      width: 65%;
+      max-width: 65%; }
+      .main .article .letter_box {
+        justify-content: flex-start;
+        width: 92.5%;
+        max-width: 95.5%;
+        box-shadow: inset -2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 3px 0 rgba(43, 73, 73, 0.2); }
+        .main .article .letter_box .letter {
+          width: 96%;
+          max-width: 96%;
+          border-left: none;
+          box-shadow: 1px 1px 2px 0 rgba(119, 140, 166, 0.4), 1px -1px 2px 0 rgba(119, 140, 166, 0.4); }
+          .main .article .letter_box .letter .text {
+            width: 88%;
+            max-width: 88%;
+            margin: 0 0 0 2rem; } }
+@media (min-width: 800px) {
+  .main .header {
+    width: 35%;
+    max-width: 35%;
+    padding: 1.2rem 0; }
+    .main .header .company_box {
+      width: 87.5%;
+      max-width: 87.5%;
+      margin: 1.25rem 0 0 0; }
+      .main .header .company_box .company {
+        width: 91.5%;
+        max-width: 91.5%; }
+        .main .header .company_box .company .text {
+          width: 96%;
+          max-width: 96%;
+          margin: 0 1rem 0 0; }
+          .main .header .company_box .company .text .company_address,
+          .main .header .company_box .company .text .company_town {
+            font-size: 1rem; }
+          .main .header .company_box .company .text .tav {
+            font-size: 1rem; }
+            .main .header .company_box .company .text .tav span {
+              font-size: .9rem; }
+  .main .article {
+    justify-content: flex-start;
+    width: 65%;
+    max-width: 65%;
+    padding: 1.2rem 0; }
+    .main .article .letter_box {
+      width: 92.5%;
+      max-width: 95.5%;
+      padding: 1.2rem 0; }
+      .main .article .letter_box .letter {
+        width: 96%;
+        max-width: 96%; } }
+@media (min-width: 1024px) {
+  .main .header {
+    width: 35%;
+    max-width: 35%;
+    padding: 1.2rem 0; }
+    .main .header .company_box {
+      width: 80%;
+      max-width: 80%;
+      height: 13.3rem;
+      margin: 1.3rem 0 0 0; }
+      .main .header .company_box .company {
+        width: 92.5%;
+        max-width: 92.5%; }
+        .main .header .company_box .company .text {
+          width: 94%;
+          max-width: 94%;
+          margin: 0 2rem 0 0; }
+  .main .article {
+    width: 65%;
+    max-width: 65%;
+    padding: 1.2rem 0; }
+    .main .article .letter_box {
+      width: 90%;
+      max-width: 90%;
+      padding: 1.2rem 0; }
+      .main .article .letter_box .letter {
+        width: 96.5%;
+        max-width: 96.5%; }
+        .main .article .letter_box .letter .text {
+          width: 90%;
+          max-width: 90%; } }
+@media (min-width: 1280px) {
+  .main .header {
+    width: 30%;
+    max-width: 30%;
+    padding: 1.2rem 0; }
+    .main .header .company_box {
+      width: 80%;
+      max-width: 80%;
+      height: 13.3rem;
+      margin: 1.3rem 0 0 0;
+      padding: 1.2rem 0; }
+  .main .article {
+    width: 70%;
+    max-width: 70%;
+    padding: 1.2rem 0; }
+    .main .article .letter_box {
+      width: 90%;
+      max-width: 90%;
+      padding: 1.2rem 0; }
+      .main .article .letter_box .letter {
+        width: 97.5%;
+        max-width: 97.5%; } }
+@media (min-height: 800px) {
+  .main {
+    padding: 8% 0 2.1% 0; } }
+@media (min-height: 900px) {
+  .main {
+    padding: 12% 0 6% 0; } }
+@media (min-height: 940px) {
+  .main {
+    padding: 13% 0 8% 0; } }
+@media (min-height: 960px) {
+  .main {
+    padding: 14% 0 8.5% 0; } }
+
+/*# sourceMappingURL=stylesheet_Web.css.map */
