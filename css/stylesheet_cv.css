@@ -712,14 +712,14 @@ button, a {
         .popup_window .skills_box .chapter .section .text_box .skills_list li .list_square {
           width: .5rem;
           height: .5rem;
-          margin: .425rem .5rem 0 0;
+          margin: .6rem .5rem 0 0;
           border: 1px solid rgba(13, 90, 107, 0.6);
           border-radius: 3px; }
         .popup_window .skills_box .chapter .section .text_box .skills_list li .list_text {
           margin: .2rem 0 .4rem 0;
           color: #707070;
           font-family: 'Comfortaa', sans-serif;
-          font-size: .9rem;
+          font-size: .8rem;
           font-weight: 400;
           text-align: left;
           line-height: 1.3rem; }
@@ -745,7 +745,7 @@ button, a {
       .popup_window .softSkills_box .chapter .section .skills_list li .list_square {
         width: .5rem;
         height: .5rem;
-        margin: .425rem .5rem 0 0;
+        margin: .6rem .5rem 0 0;
         border: 1px solid rgba(13, 90, 107, 0.6);
         border-radius: 3px; }
       .popup_window .softSkills_box .chapter .section .skills_list li .list_text {
@@ -895,7 +895,7 @@ button, a {
       font-size: .86rem;
       font-weight: 400;
       text-align: left;
-      line-height: 1.2rem; }
+      line-height: 1.25rem; }
     .popup_window .work_box .chapter .section .text_box .work_list {
       width: 96%;
       max-width: 96%;
@@ -919,7 +919,7 @@ button, a {
           font-size: .9rem;
           font-weight: 400;
           text-align: left;
-          line-height: 1.1rem; }
+          line-height: 1.2rem; }
 
 .box_visible {
   display: flex; }
@@ -1074,6 +1074,8 @@ button, a {
     width: 20%;
     max-width: 20%; } }
 @media (min-width: 800px) {
+  .mainpage .aboutme_box .chapter .section .content .text_box .text_part {
+    line-height: 1.2rem; }
   .mainpage .skills_box .chapter .section .content {
     flex-direction: row;
     padding: .4rem 0 .4rem 0;
@@ -1169,47 +1171,69 @@ button, a {
     width: 48%;
     max-width: 48%;
     margin: 0 1rem 0 0; }
-  .mainpage .artSchool_box .chapter .section .content {
+  .mainpage .aboutme_box .chapter .section .content .text_box .text_part {
+    font-size: .95rem;
+    line-height: 1.3rem; }
+  .mainpage .hobbies_box .chapter .section .content .hobby_list li .list_text {
+    font-size: .95rem; }
+  .mainpage .skills_box .chapter .section .content .sub_title {
+    font-size: 1.05rem; }
+  .mainpage .skills_box .chapter .section .content .text_box .text_part {
+    font-size: .95rem; }
+  .mainpage .skills_box .chapter .section .content .text_box .skills_list .list_text {
+    font-size: .95rem; }
+  .mainpage .softSkills_box .chapter .section .content .skills_list .list_text {
+    font-size: .95rem;
+    line-height: 1.4rem; }
+  .mainpage .languages_box .chapter .section .content .languages_table th p {
+    font-size: 1.1rem; }
+  .mainpage .languages_box .chapter .section .content .languages_table td p {
+    font-size: .95rem; }
+  .mainpage .webSchool_box .chapter .section .content .sub_title_box .sub_title {
+    width: 116px;
+    max-width: 116px;
+    font-size: 1rem; }
+  .mainpage .webSchool_box .chapter .section .content .sub_title_box .school_name {
+    width: 170px;
+    max-width: 170px;
+    font-size: 1rem; }
+  .mainpage .webSchool_box .chapter .section .content .text_box {
+    width: 100%;
+    max-width: 100%;
+    font-size: .95rem;
+    line-height: 1.3rem; }
+  .mainpage .artSchool_box .chapter .section .content .sub_title_box {
     flex-direction: row; }
-    .mainpage .artSchool_box .chapter .section .content .sub_title_box {
-      width: 440px;
-      max-width: 444px;
-      flex-direction: row; }
-    .mainpage .artSchool_box .chapter .section .content .school_name {
-      width: 340px;
-      max-width: 340px;
+    .mainpage .artSchool_box .chapter .section .content .sub_title_box .sub_title {
+      width: 116px;
+      max-width: 116px;
+      font-size: 1rem; }
+    .mainpage .artSchool_box .chapter .section .content .sub_title_box .school_name {
+      width: 60%;
+      max-width: 60%;
       margin: 0 0;
-      border-right: 1px dotted rgba(112, 112, 112, 0.68); }
-    .mainpage .artSchool_box .chapter .section .content .text_box {
-      width: 50%;
-      margin: .3rem 0 0 .6rem;
-      padding: 0 0;
-      border: none;
-      box-shadow: none; } }
+      font-size: 1rem; }
+  .mainpage .artSchool_box .chapter .section .content .text_box {
+    width: 100%;
+    margin: .3rem 0 0 0;
+    font-size: .95rem; }
+  .mainpage .work_box .chapter .section .content .sub_title_box .sub_title {
+    font-size: .9rem; }
+  .mainpage .work_box .chapter .section .content .sub_title_box .work_name {
+    font-size: 1.1rem; }
+  .mainpage .work_box .chapter .section .content .text_box .text_part {
+    font-size: .95rem;
+    line-height: 1.35rem; }
+  .mainpage .work_box .chapter .section .content .text_box .work_list li .list_text {
+    font-size: .95rem;
+    line-height: 1.35rem; } }
 @media (min-width: 1216px) {
   .page_header .header_content .header_flex .page_title {
     width: 80%;
     max-width: 80%; }
   .page_header .header_content .header_flex .page_subtitle {
     width: 16%;
-    max-width: 16%; }
-
-  .mainpage .webSchool_box .chapter .section .content {
-    flex-direction: row; }
-    .mainpage .webSchool_box .chapter .section .content .sub_title_box {
-      width: 28%;
-      max-width: 16rem;
-      border: none; }
-    .mainpage .webSchool_box .chapter .section .content .school_name {
-      width: 160px;
-      max-width: 160px;
-      margin: 0 0;
-      border-right: 1px dotted rgba(112, 112, 112, 0.68); }
-    .mainpage .webSchool_box .chapter .section .content .text_box {
-      width: 75%;
-      margin: .3rem 0 0 .6rem;
-      padding: 0 0;
-      border: none; } }
+    max-width: 16%; } }
 @media (min-width: 1280px) {
   .navbar {
     background: white; }
@@ -1224,7 +1248,32 @@ button, a {
     width: 15%;
     max-width: 15%; }
     .page_header .header_content .header_flex .page_subtitle .cv {
-      margin: .8rem 0 0 .4rem; } }
+      margin: .8rem 0 0 .4rem; }
+
+  .mainpage .artSchool_box .chapter .section .content {
+    flex-direction: row; }
+    .mainpage .artSchool_box .chapter .section .content .sub_title_box {
+      flex-direction: row;
+      width: 440px;
+      max-width: 440px; }
+      .mainpage .artSchool_box .chapter .section .content .sub_title_box .sub_title {
+        width: 116px;
+        max-width: 116px;
+        font-size: 1rem; }
+      .mainpage .artSchool_box .chapter .section .content .sub_title_box .school_name {
+        width: 316px;
+        max-width: 316px;
+        margin: 0 0;
+        font-size: 1rem; }
+    .mainpage .artSchool_box .chapter .section .content .text_box {
+      width: 40%;
+      max-width: 40%;
+      margin: .3rem 0 0 0;
+      font-size: .95rem;
+      padding: 0 0 0 .8rem;
+      border: none;
+      text-align: left;
+      border-left: 1px dotted rgba(112, 112, 112, 0.68); } }
 @media (min-width: 1282px) {
   .navbar {
     border-right: 1px solid rgba(13, 90, 107, 0.6);

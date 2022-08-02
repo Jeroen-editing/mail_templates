@@ -116,15 +116,19 @@ const createPersonalInfo = () => {
                     <section class="content aboutme">
                         <div class="text_box">
                             <p class="text_part">
-                                In 2019 I had to make a choice in my professional career and after some research I 
-                                started studying  web development. First in an online course and later on in a fulltime course at 
-                                Becode and evening classes at Encora.
+                                In 2019 I had to make a choice in my career and after some research I started studying 
+                                web development. Because I have a graphical history, in the beginning I obviously most 
+                                of all liked working on the layout of websites and apps. But soon after I discovered 
+                                that I also really love working with (Vanilla) JavaScript, so I keep learning and 
+                                improving myself in it 
                             </p>
                             <p class="alinea"></p>
                             <p class="text_part">
-                                I soon discovered that I really like working with JavaScript, so I keep learning 
-                                and improving myself in it, by doing online courses and projects. First I did extra ES6 and after 
-                                that I started with jQuery, Vue.JS, React.JS, Redux, NodeJS,…
+                                We didn’t learn ES6 in my courses, so of course I had to do that first. And afterwards 
+                                I started with learning the basics of frameworks in general. Every company prefers a 
+                                different one, so I decide for myself, that it’s better to now first how they work, 
+                                instead of learning 1. And for now I’ve already been working with jQuery, Vue.JS, 
+                                React.JS, Redux, Node.JS,… 
                             </p>
                         </div>
                     </section>
