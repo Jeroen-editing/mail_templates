@@ -3,20 +3,79 @@
     padding: 0 0;
     cursor: pointer;
 }
+
+//------------------- COLORS --------------
+$green: #0c7b85;
+$darkgreen: #0d5a6b;
+$lightgreen: #0c9ea8;
+$darkred : #7d0000;
+$orange: #ffb805;
+$gray: #707070;
+$darkgray: #555555;
+$linkColor: #1488b3;
+
+$darkBorder: 1px solid rgba($darkgreen, .6);
+$lightBorder: 1px solid rgba($green, 0.4);
+
+$shadow: -1px -1px 2px 0 rgba($gray, .2), -1px 1px 2px 0 rgba($gray, .2);
+$insetShadow: inset 2px 2px 3px 0 rgba($darkgray, .2), inset -2px -2px 3px 0 rgba($darkgray, .2);
+
+//------------------- VARS --------------
+@mixin button {
+    color: #484848;
+    background: rgba($darkgreen, .5);
+    background: linear-gradient(180deg, rgba($darkgreen, .48) 0%, rgba($green, .44) 35%, rgba($green, .44) 70%, rgba($darkgreen, .48) 100%);
+    border: $lightBorder;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 0 rgba($darkgray, .3), -1px -1px 2px 0 rgba($darkgray, .3);
+}
+@mixin buttonHover {
+    color: white;
+    background: $darkgreen;
+    background: linear-gradient(180deg, $darkgreen 0%, $green 35%, $green 70%, $darkgreen 100%);
+    border: $darkBorder;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 0 rgba($darkgray, .3), -1px -1px 2px 0 rgba($darkgray, .3);
+}
+
+//------------------- FONTS -------------
+a  p {
+    font-family: 'Comfortaa', cursive;
+}
+p {
+    font-family: 'Comfortaa', cursive;
+}
+h2 {
+    font-family: 'Encode Sans SC', sans-serif;
+}
+h3, h4, h5, h6 {
+    font-family: 'Genos', sans-serif;
+}
+button, a {
+    cursor: grab;
+
+    h3, img, p  {
+        cursor: grab;
+    }
+}
+
+//------------------- LIMITS -------------
 body {
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 0;
-    border-right: 1px solid rgba(28, 90, 107, .4);
-    border-bottom: 1px solid rgba(28, 90, 107, .4);
-    border-left: 1px solid rgba(28, 90, 107, 0.4);
-    //box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 3px 0 rgba(43, 73, 73, 0.2);
+    //border-right: $darkBorder;
+    //border-bottom: $darkBorder;
+    //border-left: $darkBorder;
     cursor: pointer;
+    background: rgba($gray, .05);
 }
+
+
 //------------------- FONTS
 a  p {
-    font-family: 'Glory', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 p {
     font-family: 'Comfortaa', cursive;
@@ -42,25 +101,6 @@ button, a {
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 0;
-    background: rgba(140, 163, 163, 0.15);
-}
-
-//------------------- COLORS
-$green: #116177;
-$darkgreen: #0a3e4d;
-$lightgreen: #077a77;
-$darkred : #7d0000;
-$orange: #ffb805;
-$gray: #707070;
-$darkgray: #555555;
-$linkColor: #0182b0;
-
-//------------------- SHADOWS
-@mixin squareShadow {
-    box-shadow: 2px 0 3px rgba(2, 2, 2, 0.44), -2px 0 3px rgba(2, 2, 2, 0.44),
-                0 2px 3px rgba(2, 2, 2, 0.44), 0 -2px 3px rgba(2, 2, 2, 0.44),
-                4px 0 5px rgba(20, 20, 20, 0.22), -4px 0 5px rgba(20, 20, 20, 0.22),
-                0 4px 5px rgba(20, 20, 20, 0.22), 0 -4px 5px rgba(20, 20, 20, 0.22);
 }
 
 
@@ -70,27 +110,26 @@ $linkColor: #0182b0;
     width: 100%;
     max-width: 1280px;
     top: 0;
-    margin: 0 0;
+    margin: 0 auto;
     padding: 0 0;
     background: white;
-    border-bottom: 1px solid rgba(28, 90, 107, 0.5);
+    border-bottom: $darkBorder;
     z-index: 10;
 
     .selectdrop {
         display: flex;
         flex-direction: row;
         width: 100%;
-        max-width: 1278px;
-        margin: 0 0;
+        max-width: 1280px;
+        margin: 0 auto;
         padding: 0 0;
-        background: rgba(142, 183, 183, 0.2);
         cursor: grab;
 
         .nav_link {
             display: flex;
             flex-direction: row;
-            justify-content: center;
-            width: 51%;
+            justify-content: flex-start;
+            width: 33.3333%;
             height: 1.1rem;
             max-height: 1.1rem;
             margin: 0 0;
@@ -100,28 +139,30 @@ $linkColor: #0182b0;
             .icon {
                 height: 15px;
                 max-height: 15px;
-                margin: .05rem .7rem 0 .7rem;
+                margin: .06rem .4rem 0 .2rem;
                 background: white;
                 border-radius: 3px;
-                //box-shadow: 1px 1px 2px rgba(23, 23, 23, 0.2), -1px -1px 2px rgba(22, 22, 22, 0.2);
                 opacity: 0;
             }
             .nav_text {
                 margin: .06rem 0 0 0;
                 color: $linkColor;
-                font-size: .95rem;
+                font-size: .65rem;
                 font-weight: 400;
-                letter-spacing: 1px;
                 line-height: 16px;
-                //text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3), -1px -1px 2px rgba(255, 255, 255, 0.3);
+            }
+            .portfolio_icon {
+                height: 17px;
+                max-height: 17px;
+                border-radius: 2px;
             }
             .linkedin_icon {
                 height: 17px;
                 max-height: 17px;
-                margin: 0 .6rem 0 .6rem;
+                margin: .02rem .4rem 0 .2rem;
             }
             &:hover {
-                background: rgba(119, 165, 166, 0.15);
+                background: rgba($darkgreen, .15);
 
                 .icon {
                     opacity: 1;
@@ -144,8 +185,7 @@ $linkColor: #0182b0;
         opacity: 0;
         background: $green;
         border: 1px solid $gray;
-        @include squareShadow();
-        transition: all 0.3s, opacity 0.1s, transform 0.2s;
+        transition: all .3s, opacity .1s, transform .2s;
         transform-origin: 50% 0;
         z-index: 10;
 
@@ -157,11 +197,10 @@ $linkColor: #0182b0;
             width: 1.2rem;
             height: 1.2rem;
             display: block;
-            //background: $darkgreen;
             background: $green;
             border-left: 1px solid $gray;
             border-top: 1px solid $gray;
-            box-shadow: -2px -2px 2px rgba(2, 2, 2, 0.44), -4px -4px 4px rgba(20, 20, 20, 0.22);
+            box-shadow: $insetShadow;
             transform: translateY(-50%) rotate(45deg);
             z-index: -1;
         }
@@ -203,11 +242,11 @@ $linkColor: #0182b0;
 }
 
 
-//------------------- PAGE HEADER (Name + Title) -------------------
+//------------------- PAGE HEADER -------------------
 .page_header {
     position: sticky;
     width: 100%;
-    max-width: 1278px;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 0;
     top: 0;
@@ -217,10 +256,10 @@ $linkColor: #0182b0;
 
     .header_bg {
         width: 100%;
-        max-width: 1278px;
+        max-width: 1280px;
         margin: 0 auto;
-        padding: 2.4rem 0 0 0;
-        background: rgba(140, 163, 163, 0.15);
+        padding: 1.8rem 0 0 0;
+        background: rgba($gray, .05);
     }
 }
 .header_content {
@@ -233,30 +272,29 @@ $linkColor: #0182b0;
     height: 5.8rem;
     margin: 0 auto;
     padding: 0 0;
-    background: rgba(140, 163, 163, 0.6);
-    border: 1px solid rgba(28, 48, 48, 0.4);
-    box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 3px 0 rgba(43, 73, 73, 0.2);
+    background: rgba($darkgreen, 0.3);
+    border: $darkBorder;
+    box-shadow: $insetShadow;
     overflow: hidden;
     animation: titleSlideIn 2s ease-in-out;
 
     .header_flex {
         display: flex;
         flex-direction: row;
-        //justify-content: center;
-        //justify-items: center;
-        //align-content: center;
-        //align-items: center;
         width: 96%;
         max-width: 96%;
         height: 4rem;
         margin: 0 0;
         padding: 0 0;
         background: white;
-        border: 1px solid rgba(28, 90, 107, 0.6);
+        border: $darkBorder;
         border-right: none;
-        box-shadow: -1px -1px 2px 0 rgba(119, 140, 166, 0.4), -1px 1px 2px 0 rgba(119, 140, 166, 0.4);
+        box-shadow: $shadow;
 
         .page_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             width: 64%;
             margin: 0 0 0 1rem;
             padding: .4rem 0;
@@ -267,11 +305,11 @@ $linkColor: #0182b0;
                 width: 96%;
                 margin: 0 0;
                 padding: 0 0;
-                color: $lightgreen;
+                color: $green;
                 font-family: 'Jura', sans-serif;
                 font-size: 1.3rem;
                 font-weight: 700;
-                text-shadow: 0 0 3px rgba(255, 255, 255, 1);
+                text-shadow: 0 0 3px rgb(255, 255, 255);
             }
             .cv {
                 width: 96%;
@@ -288,7 +326,6 @@ $linkColor: #0182b0;
             }
         }
         .page_photo {
-            //width: 6rem;
             margin: 0 0;
             padding: 0 0;
         
@@ -297,8 +334,30 @@ $linkColor: #0182b0;
                 margin: -1.3rem 0 0 0;
                 padding: 0 0;
                 border: 1px solid #a2a2a2;
-                box-shadow: 0 0 2px rgba(186, 186, 186, 0.4), 0 0 1px rgba(162, 162, 162, 0.6);
+                box-shadow: $shadow;
                 z-index: -1;
+            }
+        }
+        .page_subtitle {
+            display: none;
+            width: 30%;
+            margin: 0 0 0 1rem;
+            padding: .4rem 0;
+            text-align: end;
+            letter-spacing: 1px;
+
+            .cv {
+                width: 96%;
+                margin: 0 0;
+                margin: 0 0 0 0;
+                padding: 0 0;
+                color: $darkgray;
+                font-family: 'Genos', sans-serif;
+                font-size: 2rem;
+                font-size: 1.3rem;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-shadow: 0 0 3px rgb(255, 255, 255);
             }
         }
     }
@@ -311,38 +370,34 @@ $linkColor: #0182b0;
     align-items: center;
     align-content: center;
     width: 100%;
-    max-width: 1278px;
-    //height: 83vh;
-    max-height: 900px;
+    max-width: 1280px;
+    max-height: 1280px;
     margin: 0 auto;
     padding: 0 0;
     border: none;
-    //border-right: 1px solid rgba(140, 163, 163, 0.4);
-    //border-bottom: 1px solid rgba(140, 163, 163, 0.4);
-    //border-left: 1px solid rgba(140, 163, 163, 0.4);
     overflow: scroll;
 }
 
 //------------------- MAIN SECTIONS -------------------
 .section_box,
-.pop_up,
-.pop_over {
+.pop_up {
     flex-direction: column;
     align-items: flex-end;
     width: 94%;
     max-width: 94%;
-    margin: 2.5% auto 1.5% auto;
+    height: 180px;
+    max-height: 180px;
+    margin: 0 auto 0.6% auto;
     padding: 1rem 0 1rem 0;
     letter-spacing: 1px;
-    background: rgba(140, 163, 163, 0.1);
-    //border: 1px solid rgb(28, 48, 48);
-    border: 1px solid rgba(28, 48, 48, 0.4);
-    box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 3px 0 rgba(43, 73, 73, 0.2);
+    background: rgba($gray, .06);
+    border: $darkBorder;
+    border-top: none;
+    box-shadow: $insetShadow;
     overflow: scroll;
     z-index: 5;
 }
 .section_box {
-    margin: 10% auto 15% auto;
     animation: fadeIn 1.5s forwards;
     opacity: 0;
 }
@@ -354,7 +409,7 @@ $linkColor: #0182b0;
 
     h2 {
         margin: 0 0 0 .6rem;
-        color: $lightgreen;
+        color: $green;
         font-size: 1.4rem;
         letter-spacing: 2px;
         text-align: left;
@@ -371,9 +426,9 @@ $linkColor: #0182b0;
     padding: .4rem 0;
     color: $darkgray;
     background: white;
-    border: 1px solid rgba(28, 90, 107, 0.6);
+    border: $lightBorder;
     border-right: none;
-    box-shadow: -1px -1px 2px 0 rgba(119, 140, 166, 0.4), -1px 1px 2px 0 rgba(119, 140, 166, 0.4);
+    box-shadow: $shadow;
 
         .chapter {
             display: flex;
@@ -416,31 +471,20 @@ $linkColor: #0182b0;
                     min-width: 100%;
                     max-width: 100%;
                     height: 1.8rem;
-                    //background: rgba($linkColor, .4);
-                    background: rgb(28,90,107);
-                    background: linear-gradient(180deg, rgba(28,90,107,1) 0%, rgba(35,110,130,1) 35%, rgba(35,110,130,1) 70%, rgba(28,90,107,1) 100%);
-                    border-radius: 4px;
-                    //border: 1px solid rgba($darkgreen, .2);
-                    border: 1px solid #14414d;
-                    border-radius: 5px;
-                    box-shadow: -2px 0 2px 0 rgba(119, 140, 166, 0.24);
+                    @include button();
                 }
                 p {
-                    margin: 0 .2rem .1rem .6rem;
-                    //color: $darkgray;
-                    color: white;
+                    margin: 0 .2rem .1rem .4rem;
                     font-family: 'Genos', sans-serif;
                     font-size: 1.1rem;
-                    font-weight: 400;
+                    font-weight: 500;
                     letter-spacing: 1px;
-                    //text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
                 }
                 img {
                     width: 1.4rem;
                     height: .8rem;
                     margin: 0 .4rem 0 0;
                     padding: 0 0;
-                    
                 }
                 
             }
@@ -452,14 +496,7 @@ $linkColor: #0182b0;
                 }
                 .chapter_button {
                     button {
-                        background: rgb(8,133,129);
-                        background: linear-gradient(180deg, rgba(8,133,129,1) 0%, rgba(9,153,149,1) 35%, rgba(9,153,149,1) 70%, rgba(8,133,129,1) 100%);
-                        border: 1px solid #0a7675;
-                    }
-                    p {
-                        color: black;
-                        //color: $orange;
-                        font-weight: 500;
+                        @include buttonHover();
                     }
                 }
             }
@@ -467,9 +504,6 @@ $linkColor: #0182b0;
 }
 
 .pop_up {
-    height: 370px;
-    max-height: 370px;
-    margin: 5% 0 5% 0;
     padding: 1rem 0 1rem 0;
     animation: fadeIn 1.5s forwards;
     overflow: scroll;
@@ -487,35 +521,36 @@ $linkColor: #0182b0;
         justify-content: space-between;
         width: 96%;
         max-width: 96%;
-        margin: 0 0 0 0;
+        margin: 0 0;
         padding: 0 0;
 
         .chapters_title {
             margin: 0 0 0 .4rem;
-            //color: $darkgreen;
-            //color: rgb(28, 90, 107);
-            color: $lightgreen;
-            font-size: 1.7rem;
+            color: $green;
+            font-size: 1.8rem;
             font-weight: 600;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
         .close_button {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            height: 2rem;
-            width: 2rem;
-            margin: 0 1rem .8rem 0;
+            align-items: center;
+            align-content: center;
+            height: 1.8rem;
+            width: 1.8rem;
+            margin: 0 .8rem .8rem 0;
             padding: 0 0;
-            background: rgb(28,90,107);
-            background: linear-gradient(180deg, rgba(28,90,107,1) 0%, rgba(35,110,130,1) 35%, rgba(35,110,130,1) 70%, rgba(28,90,107,1) 100%);
-            border: 1px solid #14414d;
-            border-radius: 50%;
-            box-shadow: 0 0 2px 0 rgba(119, 140, 166, 0.24);
+            @include buttonHover();
     
             button {
-                width: 100%;
-                height: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                height: 1.8rem;
+                width: 1.8rem;
                 outline: none;
                 background: transparent;
                 border: none;
@@ -523,9 +558,11 @@ $linkColor: #0182b0;
                 .close_x  {
                     width: 1.2rem;
                     height: 1.2rem;
-                    margin: .14rem 0 0 .05rem;
                     opacity: .8;
                 }
+            }
+            &:hover {
+                @include button();
             }
         }
     }
@@ -541,9 +578,9 @@ $linkColor: #0182b0;
         padding: .4rem 0 .6rem 0;
         color: $darkgray;
         background: white;
-        border: 1px solid rgba(28, 90, 107, 0.6);
+        border: $darkBorder;
         border-right: none;
-        box-shadow: -1px -1px 2px 0 rgba(119, 140, 166, 0.4), -1px 1px 2px 0 rgba(119, 140, 166, 0.4);
+        box-shadow: $shadow;
     }
     .contact_box,
     .aboutme_box,
@@ -561,9 +598,6 @@ $linkColor: #0182b0;
         max-width: 100%;
         margin: .4rem auto .2rem auto;
         padding: 0 0 0 0;
-        //border-right: 1px solid rgba(28, 48, 48, 0.4);
-        //border-bottom: 1px solid rgba(28, 48, 48, 0.4);
-        //box-shadow: inset -2px -2px 2px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 2px 0 rgba(43, 73, 73, 0.2);
     }
     .chapter {
         display: flex;
@@ -573,24 +607,20 @@ $linkColor: #0182b0;
         max-width: 96%;
         margin: 0 0;
         padding: 0 0 0 0;
-        //background: rgba(140, 163, 163, 0.08);
-        //border: 1px solid rgba(28, 48, 48, 0.4);
-        //box-shadow: inset 2px 2px 3px 0 rgba(43, 73, 73, 0.2), inset -2px -2px 3px 0 rgba(43, 73, 73, 0.2);
-        //overflow: scroll;
 
         .section_title {
             width: 100%;
             max-width: 100%;
-            margin: 0 0;
-            padding: .2rem 0 .6rem;
+            margin: .2rem 0 0 0;
+            padding: .3rem 0;
     
             h3 {
-                margin: 0 0 0 .4rem;
-                //olor: $green;
+                margin: 0 0;
+                padding: 0 0 0 .4rem;
                 color: $darkgray;
                 font-size: 1.5rem;
-                font-weight: 600;
-                text-align: left;
+                font-weight: 500;
+                letter-spacing: 2px;
             }
         }
         .section {
@@ -598,35 +628,46 @@ $linkColor: #0182b0;
             justify-content: flex-start;
             width: 100%;
             max-width: 100%;
-            margin: 0 0;
+            margin: 0 0 .6rem 0;
             padding: .8rem 0;
             color: $darkgray;
             background: white;
-            border: 1px solid rgba(28, 90, 107, 0.4);
+            border: $darkBorder;
             border-right: none;
-            box-shadow: inset 1px -1px 1px 0 rgba(119, 140, 166, 0.4), inset 1px 1px 1px 0 rgba(119, 140, 166, 0.4);
+            box-shadow: $insetShadow;
         }
     }
     .contact_box {
         .chapter {
             .section {
-                .content {
+                .duo_flex {
                     display: flex;
                     flex-direction: column;
                     width: 94%;
                     max-width: 94%;
-                    margin: 0 auto .2rem auto;
+                    margin: .2rem auto;
+                    padding: 0 0;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 0;
+                    padding: 0 0;
                 }
                 .mail,
                 .phone,
-                .linkedin {
-                    margin: .8rem auto;
+                .linkedin,
+                .portfolio {
+                    margin: .8rem 0 0 0;
                 }
                 .sub_title {
                     width: 5rem;
                     max-width: 5rem;
                     margin: 0 0 .4rem 0;
-                    color: $lightgreen;
+                    color: $green;
                     font-size: 1rem;
                     font-weight: 500;
                     letter-spacing: 2px;
@@ -634,45 +675,78 @@ $linkColor: #0182b0;
                 .btn {
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: center;
                     width: 100%;
-                    max-width: 100%;
+                    max-width: 500px;
                     height: 1.8rem;
                     margin: 0 0;
                     padding: 0 0;
-                    background: rgb(28,90,107);
-                    background: linear-gradient(180deg, rgba(28,90,107,1) 0%, rgba(35,110,130,1) 35%, rgba(35,110,130,1) 70%, rgba(28,90,107,1) 100%);
-                    border: 1px solid #14414d;
-                    border-radius: 5px;
-                    box-shadow: -2px 0 2px 0 rgba(119, 140, 166, 0.24);
 
                     button {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
                         width: 100%;
                         max-width: 100%;
                         height: 1.8rem;
+                        margin: 0 0;
+                        padding: 0 0;
                         outline: none;
-                        background: transparent;
-                        border: none;
+                        @include button();
 
                         a {
                             width: 100%;
                             height: 1.8rem;
-                            color: white;
+                            padding: .3rem 0 0 0;
+                            color: $darkgray;
                             font-family: 'Comfortaa', cursive;
-                            font-size: .7rem;
-                            font-weight: 400;
+                            font-size: .8rem;
+                            font-weight: 600;
                             letter-spacing: 1px;
                             line-height: 1.1rem;
                             text-align: center;
                             text-decoration: none;
                         }
                     }
-                    .phone_button {
-                        width: 50%;
-                        max-width: 50%; 
+                    &:hover {
+                        button {
+                            @include buttonHover();
+    
+                            a {
+                                color: white;
+                            }
+                        }
                     }
+                }
+                .phone_button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 500px;
+                    height: 1.8rem;
+                    margin: 0 0;
+                    padding: 0 0;
+
                     .gsm {
-                        border-right: 1px solid #14414d;
+                        width: 50%;
+                        max-width: 50%;
+
+                        button {
+                            border-right: $darkBorder;
+                            border-top-right-radius: 0px;
+                            border-bottom-right-radius: 0px;
+                        }
+                    }
+                    .home {
+                        width: 50%;
+                        max-width: 50%;
+
+                        button {
+                            border-left: none;
+                            border-top-left-radius: 0px;
+                            border-bottom-left-radius: 0px;
+                        }
                     }
                 }
                 .text_box {
@@ -699,10 +773,12 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: 0 auto;
+                    padding: .4rem 0;
 
                     .text_box {
                         width: 100%;
-                        max-width: 750px;
+                        max-width: 100%;
+                        padding: .3rem 0;
 
                         .text_part {
                             margin: .2rem 0;
@@ -731,6 +807,7 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: 0 auto;
+                    padding: .4rem 0;
                 }
                 .hobby_list {
                     list-style: none;
@@ -745,9 +822,8 @@ $linkColor: #0182b0;
                             width: .5rem;
                             height: .5rem;
                             margin: .425rem .5rem 0 0;
-                            border: 1px solid $darkgreen;
+                            border: $darkBorder;
                             border-radius: 3px;
-                            //opacity: .9;
                         }
                         .list_text {
                             margin: .2rem 0 .4rem 0;
@@ -773,12 +849,13 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: 0 auto .2rem auto;
+                    padding: .4rem 0;
                 }
                 .sub_title {
                     width: 100%;
                     max-width: 100%;
                     margin:  0 0 .1rem 0;
-                    color: $lightgreen;
+                    color: $green;
                     font-size: 1rem;
                     font-weight: 500;
                     letter-spacing: 2px;
@@ -790,9 +867,7 @@ $linkColor: #0182b0;
                     max-width: 100%;
                     margin: .2rem 0 .6rem 0;
                     padding: .2rem 0 .6rem 0;
-                    border-top: 1px solid rgba(18, 98, 120, 0.2);
-                    //border-right: 1px solid rgba(18, 98, 120, 0.2);
-                    //box-shadow: inset -1px 1px 1px rgba(119, 140, 166, 0.2);
+                    border-top: $lightBorder;
 
                     .text_part {
                         margin: .3rem 0 .4rem 0;
@@ -814,9 +889,8 @@ $linkColor: #0182b0;
                                 width: .5rem;
                                 height: .5rem;
                                 margin: .425rem .5rem 0 0;
-                                border: 1px solid $darkgreen;
+                                border: $darkBorder;
                                 border-radius: 3px;
-                                //opacity: .9;
                             }
                             .list_text {
                                 margin: .2rem 0 .4rem 0;
@@ -825,7 +899,7 @@ $linkColor: #0182b0;
                                 font-size: .9rem;
                                 font-weight: 400;
                                 text-align: left;
-                                line-height: 1.1rem;
+                                line-height: 1.3rem;
                             }
                         }
                     }
@@ -847,6 +921,7 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: .4rem auto;
+                    padding: .4rem 0;
                 }
                 .skills_list {
                     list-style: none;
@@ -862,7 +937,7 @@ $linkColor: #0182b0;
                             width: .5rem;
                             height: .5rem;
                             margin: .425rem .5rem 0 0;
-                            border: 1px solid $darkgreen;
+                            border: $darkBorder;
                             border-radius: 3px;
                         }
                         .list_text {
@@ -872,7 +947,7 @@ $linkColor: #0182b0;
                             font-size: .9rem;
                             font-weight: 400;
                             text-align: left;
-                            line-height: 1.1rem;
+                            line-height: 1.3rem;
                         }
                     }
                 }
@@ -889,6 +964,7 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: .4rem auto;
+                    padding: .4rem 0;
                 }
                 .languages_table {
                     width: 96%;
@@ -900,14 +976,12 @@ $linkColor: #0182b0;
                         width: 33%;
 
                         p {
-                            //width: 6rem;
                             margin: 0 auto;
                             text-align: center;
                         }
                     }
                     th {
-                        //border-bottom: 1px solid rgba(gray, .6);
-                        border-bottom: 1px solid rgba(18, 98, 120, 0.4);
+                        border-bottom: 1px solid rgba($darkgreen, .4);
 
                         p {
                             padding: 0 0 .3rem 0;
@@ -929,8 +1003,8 @@ $linkColor: #0182b0;
                         }
                     }
                     .middle {
-                        border-right: 1px solid rgba(gray, .2);
-                        border-left: 1px solid rgba(gray, .2);
+                        border-right: 1px solid rgba(gray, .24);
+                        border-left: 1px solid rgba(gray, .24);
                     }
                 }
             }
@@ -946,6 +1020,7 @@ $linkColor: #0182b0;
                     width: 94%;
                     max-width: 94%;
                     margin: 0 auto .2rem auto;
+                    padding: .4rem 0;
                 }
                 .encora,
                 .online {
@@ -959,11 +1034,11 @@ $linkColor: #0182b0;
                     max-width: 100%;
 
                     .sub_title {
-                        width: 38%;
-                        max-width: 38%;
+                        width: 100px;
+                        max-width: 100px;
                         margin: .15rem 0 0 0;
                         color: $gray;
-                        font-size: .9rem;
+                        font-size: .8rem;
                         font-weight: 400;
                         text-align: left;
                         letter-spacing: 1px;
@@ -971,7 +1046,7 @@ $linkColor: #0182b0;
                     .school_name {
                         width: 62%;
                         max-width: 62%;
-                        color: $lightgreen;
+                        color: $green;
                         font-size: 1rem;
                         font-weight: 500;
                         text-align: left;
@@ -982,21 +1057,17 @@ $linkColor: #0182b0;
                     max-width: 100%;
                     margin: .3rem 0 .4rem 0;
                     padding: .6rem 0 .4rem 0;
-                    color: $darkgray;
+                    color: $gray;
                     font-family: 'Comfortaa', sans-serif;
                     font-size: .8rem;
                     font-weight: 400;
                     text-align: left;
-                    border-top: 1px solid rgba(18, 98, 120, 0.2);
-                    //border-right: 1px solid rgba(18, 98, 120, 0.2);
-                    //box-shadow: inset -1px 1px 1px rgba(119, 140, 166, 0.2);
+                    border-top: $lightBorder;
                 }
             }
         }
     }
     .artSchool_box {
-        //margin: 1rem auto .2rem auto;
-
         .chapter {
             .section {
                 .sub_title_box {
@@ -1023,10 +1094,10 @@ $linkColor: #0182b0;
                     flex-direction: column;
                     width: 94%;
                     max-width: 94%;
-                    margin: 0 auto;
+                    margin: .3rem auto;
                 }
                 .editor {
-                    margin: .8rem auto;
+                    margin: 1.2rem auto;
                 }
                 .sub_title_box {
                     display: flex;
@@ -1040,14 +1111,14 @@ $linkColor: #0182b0;
                         max-width: 100%;
                         margin:  0 0 .1rem 0;;
                         color: $gray;
-                        font-size: .9rem;
-                        font-weight: 500;
+                        font-size: .8rem;
+                        font-weight: 400;
                         letter-spacing: 2px;
                     }
                     .work_name {
                         width: 100%;
                         max-width: 100%;
-                        color: $lightgreen;
+                        color: $green;
                         font-size: 1rem;
                         font-weight: 400;
                         text-align: left;
@@ -1058,13 +1129,9 @@ $linkColor: #0182b0;
                     max-width: 100%;
                     margin: .3rem 0 .4rem 0;
                     padding: .6rem 0 .4rem 0;
-                    border-top: 1px solid rgba(18, 98, 120, 0.2);
-                    //border-right: 1px solid rgba(18, 98, 120, 0.2);
-                    //box-shadow: inset -1px 1px 1px rgba(119, 140, 166, 0.2);
+                    border-top: $lightBorder;
 
                     .text_part {
-                        //width: 96%;
-                        //max-width: 96%;
                         width: 100%;
                         max-width: 100%;
                         color: $gray;
@@ -1091,7 +1158,7 @@ $linkColor: #0182b0;
                                 width: .5rem;
                                 height: .5rem;
                                 margin: .425rem .5rem 0 0;
-                                border: 1px solid $darkgreen;
+                                border: $darkBorder;
                                 border-radius: 3px;
                             }
                             .list_text {
@@ -1117,6 +1184,8 @@ $linkColor: #0182b0;
     display: none;
 }
 
+
+//---------- ANIMATIONS -----------------
 @keyframes titleSlideIn {
     0% {
         transform: translateY(-180px);
@@ -1141,35 +1210,744 @@ $linkColor: #0182b0;
 }
 
 
-@media (min-width: 440px) {
-    .main {
-        .work_box .chapter .content {
+//---------- RESPONSIVENESS -----------------
+//---------- Width -----------------
+@media (min-width: 375px) {
+    .navbar .selectdrop .nav_link {
+        .nav_text {
+            font-size: .75rem;
+        }
+    }
+}
+@media (min-width: 568px) {
+    .page_header .header_content {
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 4.4rem;
+
+        .header_flex {
+            height: 2.8rem;
+
+            .page_title {
+                flex-direction: row;
+                width: 56%;
+                max-width: 56%;
+                margin: 0 0 0 1.2rem;
+
+                .name {
+                    padding: .2rem .7rem .3rem 0;
+                    font-size: 1.45rem;
+                    font-weight: 800;
+                }
+                .cv {
+                    display: none;
+                }
+            }
+            .page_photo .myPhoto {
+                height: 5rem;
+            }
+            .page_subtitle {
+                display: inline-block;
+                width: 26%;
+                max-width: 26%;
+                text-align: start;
+
+                .cv {
+                    margin: .5rem .3rem 0 -.1rem;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .mainpage {
+        .section_box {
+            margin: 5% auto 5% auto;
+        }
+    }
+}
+@media (min-width: 667px) {
+    .page_header .header_content {
+        height: 4.8rem;
+
+        .header_flex {
+            height: 3rem;
+
+            .page_title {
+                width: 58%;
+                max-width: 58%;
+                margin: 0 0 0 1.2rem;
+
+                .name {
+                    padding: .2rem .9rem .3rem 0;
+                    font-size: 1.6rem;
+                    font-weight: 800;
+                }
+                .cv {
+                    display: none;
+                }
+            }
+            .page_photo .myPhoto {
+                height: 5.4rem;
+            }
+            .page_subtitle {
+                width: 24%;
+                max-width: 24%;
+
+                .cv {
+                    margin: .3rem 0 0 0;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+    .mainpage {
+        .section_box {
+            margin: 5% auto 5% auto;
+        }
+    }
+    .mainpage {
+        .contact_box .chapter .section {
+            .duo_flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 94%;
+                max-width: 94%;
+                margin: .4rem auto .2rem auto;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 100%;
+                margin: .6rem auto 0 auto;
+            }
+            .address {
+                margin: 0 auto;
+
+                .text_box {
+                    flex-direction: row;
+
+                    .text_part {
+                        margin: 0 .8rem 0 0;
+                    }
+                }
+            }
+            .mail, .phone, .linkedin, .portfolio {
+                width: 48%;
+                max-width: 48%;
+                margin: 0 1rem 0 0;
+            }
+        }
+        .work_box .chapter .section {
+            .content {
+                .sub_title_box {
+                    flex-direction: row;
+
+                    .sub_title {
+                        width: 110px;
+                        max-width: 110px;
+                        margin: .2rem 0 0 0;
+                    }
+                    .work_name {
+                        width: 70%;
+                        max-width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 684px) {
+    .navbar .selectdrop .nav_link {
+        justify-content: center;
+        .nav_text {
+            font-size: .95rem;
+        }
+    }
+    .page_header .header_content .header_flex {
+        .page_title {
+            width: 60%;
+            max-width: 60%;
+        }
+        .page_subtitle {
+            width: 22%;
+            max-width: 22%;
+        }
+    }
+    .mainpage {
+        .webSchool_box .chapter .section .content {
+            .sub_title_box {
+                width: 100%;
+                max-width: 20rem;
+            }
+            .sub_title {
+                width: 40%;
+                max-width: 100px;
+            }
+        }
+        .artSchool_box .chapter .section .content {
             .sub_title_box {
                 flex-direction: row;
+                width: 100%;
+                max-width: 100%;
+            }
+            .sub_title {
+                width: 31%;
+                max-width: 100px;
+            }
+            .school_name {
+                width: 69%;
+                margin: 0 0;
+            }
+        }
+    }
+}
+@media (min-width: 768px) {
+    .page_header .header_content .header_flex {
+        .page_title {
+            width: 62%;
+            max-width: 62%;
+        }
+        .page_subtitle {
+            width: 20%;
+            max-width: 20%;
+        }
+    }
+}
+@media (min-width: 800px) {
+    .mainpage {
+        .skills_box .chapter .section {
+            .content {
+                flex-direction: row;
+                padding: .4rem 0 .4rem 0;
+                border-bottom: 1px solid rgba($darkgreen, .2);
+            }
+            .web, .design {
+                margin: .8rem auto .2rem auto;
+            }
+            .design {
+                border: none;
+            }
+            .sub_title {
+                width: 190px;
+                max-width: 190px;
+            }
+            .text_box {
+                width: 70%;
+                max-width: 70%;
+                margin: 0 0;
+                padding: 0 0 0 0;
+                border: none;
+
+                .skills_list li {
+                    margin: 0 0 .3rem 0;
+                }
+            }
+            .systems {
+                .text_box {
+                    margin: 0 0 0 .1rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 844px) {
+    .page_header .header_content {
+        .header_flex {
+            .page_title {
+                width: 64%;
+                max-width: 64%;
+                
+                .name {
+                    width: 96%;
+                    padding: 0 .9rem .3rem 0;
+                    font-size: 1.8rem;
+                    font-weight: 800;
+                }
+            }
+            .page_subtitle {
+                width: 18%;
+                max-width: 18%;
+            }
+        }
+    }
+}
+@media (min-width: 926px) {
+    .page_header .header_content {
+        .header_flex {
+            .page_title {
+                width: 72%;
+                max-width: 72%;
+            }
+            .page_subtitle {
+                width: 19%;
+                max-width: 19%;
+            }
+        }
+    }
+}
+@media (min-width: 984px) {
+    .page_header .header_content {
+        .header_flex {
+            .page_title {
+                width: 73%;
+                max-width: 73%;
+            }
+            .page_subtitle {
+                width: 18%;
+                max-width: 18%;
             }
         }
     }
 }
 @media (min-width: 1024px) {
-    .main {
-        .school_box .chapter .content {
+    .navbar .selectdrop .nav_link {
+        .nav_text {
+            font-size: .8rem;
+            letter-spacing: 1px;
+        }
+    }
+    .page_header .header_content {
+        height: 6rem;
+
+        .header_flex {
+            height: 3.4rem;
+
+            .page_title {
+                width: 75%;
+                max-width: 75%;
+                
+                .name {
+                    padding: .3rem 1.2rem .3rem 0;
+                }
+            }
+            .page_photo .myPhoto {
+                height: 6.7rem;
+                margin: -1.7rem 0 0 0;
+            }
+            .page_subtitle {
+                width: 18%;
+                max-width: 18%;
+
+                .cv {
+                    margin: .7rem 0 0 .4rem;
+                }
+            }
+        }
+    }
+    .mainpage {
+        .contact_box .chapter .section {
+            .duo_flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 94%;
+                max-width: 94%;
+                margin: .4rem auto .2rem auto;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 100%;
+                margin: .6rem auto 0 auto;
+            }
+            .address {
+                margin: 0 auto;
+
+                .text_box {
+                    flex-direction: row;
+
+                    .text_part {
+                        margin: 0 .8rem 0 0;
+                    }
+                }
+            }
+            .mail, .phone, .linkedin, .portfolio {
+                width: 48%;
+                max-width: 48%;
+                margin: 0 1rem 0 0;
+            }
+        }
+        .artSchool_box .chapter .section .content {
             flex-direction: row;
 
             .sub_title_box {
-                width: 28%;
-                max-width: 15rem;
-                border: none;
+                width: 440px;
+                max-width: 444px;
+                flex-direction: row;
             }
-            .sub_title {
-                width: 45%;
+            .school_name {
+                width: 340px;
+                max-width: 340px;
+                margin: 0 0;
+                border-right: 1px dotted rgba($gray, .68);
             }
             .text_box {
-                width: 75%;
-                margin: .3rem 0 0 0;
+                width: 50%;
+                margin: .3rem 0 0 .6rem;
                 padding: 0 0;
                 border: none;
                 box-shadow: none;
             }
         }
     }  
+}
+@media (min-width: 1216px) {
+    .page_header .header_content .header_flex {
+        .page_title {
+            width: 80%;
+            max-width: 80%;
+        }
+        .page_subtitle {
+            width: 16%;
+            max-width: 16%;
+        }
+    }
+    .mainpage {
+        .webSchool_box .chapter .section .content {
+            flex-direction: row;
+
+            .sub_title_box {
+                width: 28%;
+                max-width: 16rem;
+                border: none;
+            }
+            .school_name {
+                width: 160px;
+                max-width: 160px;
+                margin: 0 0;
+                border-right: 1px dotted rgba($gray, .68);
+            }
+            .text_box {
+                width: 75%;
+                margin: .3rem 0 0 .6rem;
+                padding: 0 0;
+                border: none;
+            }
+        }
+    }
+}
+@media (min-width: 1280px) {
+    .navbar {
+        background: rgb(255, 255, 255);
+
+        .selectdrop {
+            border-right: 1px solid rgba(140, 163, 163, 0.4);
+            border-left: 1px solid rgba(140, 163, 163, 0.4);
+        }
+    }
+    .page_header .header_content {
+        .header_flex {
+            .page_title {
+                width: 80%;
+                max-width: 80%;
+            }
+            .page_subtitle {
+                width: 15%;
+                max-width: 15%;
+
+                .cv {
+                    margin: .8rem 0 0 .4rem;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1282px) {
+    .navbar {
+        border-right: $darkBorder;
+        border-left: $darkBorder;
+        border-bottom-right-radius: 28px;
+        border-bottom-left-radius: 28px;
+        overflow: hidden;
+    }
+}
+
+//---------- Height -----------------
+@media (min-height: 320px) {
+    .mainpage {
+        .section_box, .pop_up {
+            height: 180px;
+            max-height: 180px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 360px) {
+    .mainpage {
+        .section_box, .pop_up {
+            height: 212px;
+            max-height: 212px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 375px) {
+    .mainpage {
+        .section_box, .pop_up {
+            height: 224px;
+            max-height: 224px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 384px) {
+    .mainpage {
+        .section_box, .pop_up {
+            height: 230px;
+            max-height: 230px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 390px) {
+    .page_header .header_bg {
+        padding: 2rem 0 0 0;
+    }
+    .mainpage {
+        .section_box, .pop_up {
+            height: 235px;
+            max-height: 235px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 414px) {
+    .page_header .header_bg {
+        padding: 2.2rem 0 0 0;
+    }
+    .mainpage {
+        .section_box, .pop_up {
+            height: 255px;
+            max-height: 255px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 428px) {
+    .mainpage {
+        .section_box, .pop_up {
+            height: 250px;
+            max-height: 250px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 500px) {
+    .mainpage {
+        .section_box {
+            height: 310px;
+            max-height: 310px;
+            margin: 1% auto 0 auto;
+            border-top: $darkBorder;
+        }
+        .pop_up {
+            height: 320px;
+            max-height: 320px;
+            margin: 0 auto 0 auto;
+        }
+    }
+}
+@media (min-height: 568px) {
+    .mainpage {
+        .section_box {
+            height: 310px;
+            max-height: 310px;
+            margin: 3% auto 0 auto;
+            border-top: $darkBorder;
+        }
+        .pop_up {
+            height: 375px;
+            max-height: 375px;
+            margin: 1% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 600px) {
+    .mainpage {
+        .section_box {
+            height: 320px;
+            max-height: 320px;
+            margin: 3% auto 0 auto;
+            border-top: $darkBorder;
+        }
+        .pop_up {
+            height: 390px;
+            max-height: 390px;
+            margin: 1% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 667px) {
+    .mainpage {
+        .section_box {
+            margin: 5% auto 0 auto;
+        }
+        .pop_up {
+            height: 457px;
+            max-height: 457px;
+            margin: 1.5% auto 0 auto;
+        }
+    }
+}
+@media (min-height: 768px) {
+    .mainpage {
+        .section_box {
+            padding: 2rem 0;
+            margin: 6% auto 0 auto;
+        }
+        .pop_up {
+            height: 550px;
+            max-height: 550px;
+            margin: 1.5% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 800px) {
+    .page_header {
+        .header_bg {
+            padding: 2.5rem 0 0 0;
+        }
+    }
+    .mainpage {
+        .pop_up {
+            height: 570px;
+            max-height: 570px;
+            margin: 2% auto 20 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 810px) {
+    .mainpage {
+        .pop_up {
+            height: 580px;
+            max-height: 580px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 844px) {
+    .mainpage {
+        .section_box {
+            margin: 10% auto 0 auto;
+        }
+        .pop_up {
+            height: 620px;
+            max-height: 620px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 896px) {
+    .mainpage {
+        .pop_up {
+            height: 660px;
+            max-height: 660px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 900px) {
+    .page_header .header_bg {
+        padding: 2.8rem 0 0 0;
+    }
+    .mainpage {
+        .pop_up {
+            height: 660px;
+            max-height: 660px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 960px) {
+    .mainpage {
+        .section_box {
+            margin: 10% auto 0 auto;
+        }
+        .pop_up {
+            height: 728px;
+            max-height: 728px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 1024px) {
+    .page_header {
+        .header_bg {
+            padding: 3.2rem 0 0 0;
+        }
+    }
+    .mainpage {
+        .section_box {
+            margin: 12% auto 0 auto;
+        }
+        .pop_up {
+            min-height: 770px;
+            max-height: 770px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 1080px) {
+    .page_header {
+        .header_bg {
+            padding: 3.2rem 0 0 0;
+        }
+    }
+    .mainpage {
+        .section_box {
+            margin: 12% auto 0 auto;
+        }
+        .pop_up {
+            min-height: 827px;
+            max-height: 827px;
+            margin: 2% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 1280px) {
+    .page_header {
+        .header_bg {
+            padding: 3.4rem 0 0 0;
+        }
+    }
+    .mainpage {
+        .section_box {
+            margin: 15% auto 0 auto;
+        }
+        .pop_up {
+            min-height: 922px;
+            max-height: 922px;
+            margin: 5% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
+}
+@media (min-height: 1366px) {
+    .mainpage {
+        .pop_up {
+            min-height: 922px;
+            max-height: 922px;
+            margin: 10% auto 0 auto;
+            border-top: $darkBorder;
+        }
+    }
 }

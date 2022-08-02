@@ -6,19 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motivatiebrief</title>
 
-    <link rel="stylesheet" href="css/stylesheet_Web.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesheet_motivatie.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Fredoka:wght@300;400;500;600;700&family=Genos:wght@100;200;300;400;500;600;700;800;900&family=Glory:wght@100;200;300;400;500;600;700;800&family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header class="pageHeader">
-        <div class="name">
-            <h2>Jeroen De Vos</h2>
+    <nav class="navbar">
+        <div class="dropdownBackground">
+            <div class="droparrow"></div>
         </div>
-        <div class="lineUnder"></div>
-        <div class="function">
-            <h1>Graphic & web designer</h1>
+        <div class="selectdrop">
+            <a href="mailto:jdv.editing@gmail.com?subject=Saw your portfolio." class="nav_link gmail drop">
+                <img src="assets/cv/gmail.png" class="icon gmail_icon" alt="gmail logo">
+                <p class="nav_text">mail me</p>
+                <div class="dropdown">
+                    <p class="check_out">
+                        If you are interested in my work
+                        <br>or have questions.
+                        <br><span>Just mail me.</span>
+                    </p>
+                </div>
+            </a>
+            <a href="https://jeroen-editing.github.io/mail_templates/cv.html" class="nav_link cv drop">
+                <img src="assets/cv/cv_icon.png" class="icon cv_icon" alt="cv logo">
+                <p class="nav_text">my resume</p>
+                <div class="dropdown">
+                    <p class="check_out">
+                        If you wanne see my resume
+                        <br>with studies and 
+                        <br>work experiences:
+                        <br><span>Check my resume.</span>
+                    </p>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/" class="nav_link linkedin drop">
+                <img src="assets/cv/linkedin.png" class="icon linkedin_icon" alt="LinkedIn logo">
+                <p class="nav_text">my LinkedIn</p>
+                <div class="dropdown">
+                    <p class="check_out">
+                        Where you can contact me too
+                        <br>if you don't like to mail me.
+                        <br><span>Check my linkedIn page.</span>
+                    </p>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <header class="page_header">
+        <div class="header_bg">
+            <div class="header_content">
+                <section class="header_flex">
+                    <div class="page_subtitle">
+                        <h1 class="function">
+                            Front end & JavaScript developer
+                        </h1>
+                    </div>
+                    <div class="page_title">
+                        <h2 class="name">
+                            Jeroen De Vos
+                        </h2>
+                        <h1 class="function">
+                            Front end & JavaScript developer
+                        </h1>
+                    </div>
+                </section>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -36,7 +89,10 @@
                             9000 Gent
                         </p>
                         <p class="tav">
-                            t.a.v.<br><span>Mevr. Anka Hermans</span>
+                            Betreffende:
+                        </p>
+                        <p class="name">
+                            Stage Front-end developer
                         </p>
                     </section>
                 </div>
@@ -68,29 +124,17 @@
                         </p>
                         <p class="paragraph">
                             Contacteer me gerust voor een kennismakingsgesprek en neem alvast eens een kijkje 
-                            in mijn portfolio.
+                            in mijn <a href="https://jeroen-editing.github.io/Portfolio/" class="portfolio_link">portfolio</a>.
                         </p>
                     </section>
                     <footer class="greatings">
                         <p>Met vriendelijke groeten,</p>
                         <p class="myName">Jeroen De Vos</p>
-                        <a href="mailto:jdv.editing@gmail.com" class="mailSmall_link"><p class="mailSmall"><img src="assets/envelope.png" alt=""><span>jdv.editing@gmail.com</span></p></a>
                     </footer>
                 </div>
             </div>
         </article>
     </main>
-    <footer class="myInfo">
-        <div class="titleRow">
-            <h4 class="cv">C.V.</h4>
-            <h4 class="mail">MAIL</h4>
-            <h4 class="portfolio">PORTFOLIO</h4>
-        </div>
-        <div class="infoRow">
-            <p class="myCV"><a href="https://jeroen-editing.github.io/mail_templates/cv.html" class="myTel_link">https://jeroen...cv</a></p>
-            <p class="myMail"><a href="mailto:jdv.editing@gmail.com">jdv.editing@gmail.com</a></p>
-            <p class="myPF"><a href="https://jeroen-editing.github.io/Portfolio/">https://jeroen...Portfolio</a></p>
-        </div>
-    </footer>
+    <script src="nav.js"></script>
 </body>
 </html>

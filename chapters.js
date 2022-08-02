@@ -37,59 +37,69 @@ const createPersonalInfo = () => {
                 </h3>
             </header>
             <section class="section contact_section">
-                <section class="content address">
-                    <h4 class="sub_title">
-                        Address
-                    </h4>
-                    <div class="text_box">
-                        <p class="text_part">Volkstraat 1,</p>
-                        <p class="text_part">2000 Antwerp,</p>
-                        <p class="text_part">Antwerp Belgium</p>
-                    </div>
-                </section>
-                <section class="content mail">
-                    <h4 class="sub_title">
-                        Email
-                    </h4>
-                    <div class="mail_button btn">
-                        <button>
-                            <a href="mailto:jdv.editing@gmail.com">jdv.editing@...</a>
-                        </button>
-                    </div>
-                </section>
-                <section class="content phone">
-                    <h4 class="sub_title">
-                        Phone
-                    </h4>
-                    <div class="btn">
-                        <button class="phone_button gsm">
-                            <a href="tel:+32485577391" class="tel_link">smartphone</a>
-                        </button>
-                        <button class="phone_button home">
-                            <a href="tel:+3234306079" class="tel_link">home</a>
-                        </button>
-                    </div>
-                </section>
-                <section class="content linkedin">
-                    <h4 class="sub_title">
-                        LinkedIn
-                    </h4>
-                    <div class="linkedIn_button btn">
-                        <button>
-                            <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/">https://www.linkedin...</a>
-                        </button>
-                    </div>
-                </section>
-                <section class="content portfolio">
-                    <h4 class="sub_title">
-                        Portfolio
-                    </h4>
-                    <div class="portfolio_button btn">
-                        <button>
-                            <a href="https://jeroen-editing.github.io/Portfolio/">https://www....Portfolio</a>
-                        </button>
-                    </div>
-                </section>
+                <div class="duo_flex">
+                    <section class="content address">
+                        <h4 class="sub_title">
+                            Address
+                        </h4>
+                        <div class="text_box">
+                            <p class="text_part">Volkstraat 1,</p>
+                            <p class="text_part">2000 Antwerp,</p>
+                            <p class="text_part">Antwerp Belgium</p>
+                        </div>
+                    </section>
+                </div>
+                <div class="duo_flex">
+                    <section class="content mail">
+                        <h4 class="sub_title">
+                            Email
+                        </h4>
+                        <div class="mail_button btn">
+                            <button>
+                                <a href="mailto:jdv.editing@gmail.com">jdv.editing@...</a>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="content phone">
+                        <h4 class="sub_title">
+                            Phone
+                        </h4>
+                        <div class="phone_button">
+                            <div class="gsm btn">
+                                <button>
+                                    <a href="tel:+32485577391" class="tel_link">smartphone</a>
+                                </button>
+                            </div>
+                            <div class="home btn">
+                                <button>
+                                    <a href="tel:+3234306079" class="tel_link">home</a>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="duo_flex">
+                    <section class="content linkedin">
+                        <h4 class="sub_title">
+                            LinkedIn
+                        </h4>
+                        <div class="linkedIn_button btn">
+                            <button>
+                                <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/">https://www.linkedin...</a>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="content portfolio">
+                        <h4 class="sub_title">
+                            Portfolio
+                        </h4>
+                        <div class="portfolio_button btn">
+                            <button>
+                                <a href="https://jeroen-editing.github.io/Portfolio/">https://www....Portfolio</a>
+                            </button>
+                        </div>
+                    </section>
+                </div>
             </section>
         </div>
     </article>`;
@@ -183,10 +193,10 @@ openPersonalInfo.addEventListener('click', () => {
     createPersonalInfo();
 });
 openPersonalInfo.addEventListener('mouseover', () => {
-    info_arrow.src = 'assets/cv/arrow_right.png';
+    info_arrow.src = 'assets/cv/arrow_right_white.png';
 });
 openPersonalInfo.addEventListener('mouseout', () => {
-    info_arrow.src = 'assets/cv/arrow_right_white.png';
+    info_arrow.src = 'assets/cv/arrow_right.png';
 });
 
 const createSkills = () => {
@@ -200,7 +210,7 @@ const createSkills = () => {
                         Computer skills
                     </h3>
                 </header>
-                <section class="section skills_section ">
+                <section class="section skills_section">
                     <section class="content systems">
                         <h4 class="sub_title">
                             Operating systems
@@ -343,10 +353,10 @@ openSkills.addEventListener('click', () =>  {
     createSkills();
 });
 openSkills.addEventListener('mouseover', () => {
-    skills_arrow.src = 'assets/cv/arrow_right.png';
+    skills_arrow.src = 'assets/cv/arrow_right_white.png';
 });
 openSkills.addEventListener('mouseout', () => {
-    skills_arrow.src = 'assets/cv/arrow_right_white.png';
+    skills_arrow.src = 'assets/cv/arrow_right.png';
 });
 
 
@@ -467,10 +477,10 @@ openEducation.addEventListener('click', () => {
     createEducation();
 });
 openEducation.addEventListener('mouseover', () => {
-    school_arrow.src = 'assets/cv/arrow_right.png';
+    school_arrow.src = 'assets/cv/arrow_right_white.png';
 });
 openEducation.addEventListener('mouseout', () => {
-    school_arrow.src = 'assets/cv/arrow_right_white.png';
+    school_arrow.src = 'assets/cv/arrow_right.png';
 });
 
 
@@ -553,7 +563,7 @@ const createExperiences = () => {
             </div>
         </article>`;
 
-    work.title = `${titleClass}Work experiences</h3>${closeButton}</div>`;
+    work.title = `${titleClass}Experiences</h3>${closeButton}</div>`;
     work.content = `${contentClass}${work_content}</div>`;
     work.pop_up = `${popupClass}${work.getTitle()}${work.getContent()}</section>`;
 
@@ -575,10 +585,10 @@ openWork.addEventListener('click', () => {
     createExperiences();
 });
 openWork.addEventListener('mouseover', () => {
-    school_arrow.src = 'assets/cv/arrow_right.png';
+    exp_arrow.src = 'assets/cv/arrow_right_white.png';
 });
 openWork.addEventListener('mouseout', () => {
-    school_arrow.src = 'assets/cv/arrow_right_white.png';
+    exp_arrow.src = 'assets/cv/arrow_right.png';
 });
 
 
