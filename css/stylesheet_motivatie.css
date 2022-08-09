@@ -40,8 +40,8 @@ body {
       padding: .1rem 0;
       text-decoration: none; }
       .navbar .selectdrop .nav_link .icon {
-        height: 15px;
-        max-height: 15px;
+        height: 14px;
+        max-height: 14px;
         margin: .14rem .4rem 0 1.2rem;
         background: white;
         border-radius: 3px;
@@ -53,12 +53,12 @@ body {
         font-weight: 400;
         line-height: 16px; }
       .navbar .selectdrop .nav_link .linkedin_icon {
-        height: 17px;
-        max-height: 17px;
+        height: 16px;
+        max-height: 16px;
         margin: .09rem .4rem 0 .4rem; }
       .navbar .selectdrop .nav_link .cv_icon {
-        width: 20px;
-        height: 18px;
+        width: 28px;
+        height: 16px;
         max-height: 18px;
         background: transparent;
         margin: .02rem .4rem 0 .4rem; }
@@ -673,20 +673,7 @@ body {
     padding: 1.75% 0 0 0; } }
 @media (min-height: 900px) {
   .page_header .header_bg {
-    padding: 2.5rem 0 0 0;
-        /*
-        .header_content {
-            height: 6.4rem;
-
-            .header_flex {
-                height: 4.4rem;
-
-                .page_title {
-                    padding: 0 0 .7rem 0;
-                }
-            }
-        }
-        */ }
+    padding: 2.5rem 0 0 0; }
 
   .main {
     padding: 4% 0 0 0; } }
