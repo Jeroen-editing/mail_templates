@@ -10,7 +10,7 @@ $darkred : #7d0000;
 $orange: #ffb805;
 $gray: #707070;
 $darkgray: #555555;
-$linkColor: #1488b3;
+$linkColor: #058ec0;
 
 $darkBorder: 1px solid rgba($darkgreen, .6);
 $lightBorder: 1px solid rgba($green, 0.4);
@@ -447,20 +447,15 @@ body {
                         padding: 0 0 .6rem 0;
                         font-size: .8rem;
                     }
+                    .cv_link,
                     .portfolio_link {
-                        margin: 0 -.4rem 0 -.4rem;
-                        padding: 0 .4rem .2rem .4rem;
                         color: rgba($linkColor,.8);
-                        font-family: 'Fredoka', sans-serif;
-                        font-size: 1.15rem;
-                        font-weight: 400;
+                        color: $linkColor;
+                        font-weight: 600;
                         text-decoration: none;
-                        border-radius: 5px;
-                        //border: 1px dotted rgba($linkColor,.6);
 
                         &:hover {
-                            color: white;
-                            background: rgba($linkColor,.4);
+                            color: $orange;
                         }
                     }
                 }

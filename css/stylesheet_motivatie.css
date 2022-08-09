@@ -48,7 +48,7 @@ body {
         opacity: 0; }
       .navbar .selectdrop .nav_link .nav_text {
         margin: .06rem 0 0 0;
-        color: #1488b3;
+        color: #058ec0;
         font-size: .65rem;
         font-weight: 400;
         line-height: 16px; }
@@ -368,18 +368,15 @@ body {
           .main .article .letter_box .letter .text .paragraph {
             padding: 0 0 .6rem 0;
             font-size: .8rem; }
+          .main .article .letter_box .letter .text .cv_link,
           .main .article .letter_box .letter .text .portfolio_link {
-            margin: 0 -.4rem 0 -.4rem;
-            padding: 0 .4rem .2rem .4rem;
-            color: rgba(20, 136, 179, 0.8);
-            font-family: 'Fredoka', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 400;
-            text-decoration: none;
-            border-radius: 5px; }
+            color: rgba(5, 142, 192, 0.8);
+            color: #058ec0;
+            font-weight: 600;
+            text-decoration: none; }
+            .main .article .letter_box .letter .text .cv_link:hover,
             .main .article .letter_box .letter .text .portfolio_link:hover {
-              color: white;
-              background: rgba(20, 136, 179, 0.4); }
+              color: #ffb805; }
         .main .article .letter_box .letter .greatings {
           width: 94%;
           max-width: 94%;
