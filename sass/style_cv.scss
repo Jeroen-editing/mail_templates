@@ -115,6 +115,7 @@ button, a {
     background: white;
     border-bottom: $darkBorder;
     z-index: 10;
+    overflow: visible;
 
     .selectdrop {
         display: flex;
@@ -124,6 +125,7 @@ button, a {
         margin: 0 auto;
         padding: 0 0;
         cursor: grab;
+        overflow: visible;
 
         .nav_link {
             display: flex;
@@ -210,7 +212,7 @@ button, a {
         opacity: 1;
         position: absolute;
         overflow: hidden;
-        padding: .4rem .4rem;
+        padding: .5rem .8rem;
         top: -3rem;
         border-radius: 2px;
         transition: all 0.5s;
@@ -221,10 +223,11 @@ button, a {
 
         .check_out  {
             color: white;
-            font-size: .8rem;
+            font-size: .65rem;
             font-weight: 200;
             letter-spacing: .2rem;
             line-height: 1.3rem;
+            text-align: center;
 
             span {
                 color: $orange;
@@ -1753,7 +1756,12 @@ button, a {
         border-left: $darkBorder;
         border-bottom-right-radius: 28px;
         border-bottom-left-radius: 28px;
-        overflow: hidden;
+
+        .selectdrop {
+            border-bottom-right-radius: 28px;
+            border-bottom-left-radius: 28px;
+            overflow: hidden;
+        }
     }
 }
 

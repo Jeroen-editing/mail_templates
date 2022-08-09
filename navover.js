@@ -1,5 +1,3 @@
-const getById = (id) => (document.getElementById(id));
-
 const triggers = document.querySelectorAll('.selectdrop > .drop');
 const background = document.querySelector('.dropdownBackground');
 const nav = document.querySelector('.navbar');
