@@ -120,7 +120,7 @@ const createPersonalInfo = () => {
                                 web development. Because I have a graphical history, in the beginning I obviously most 
                                 of all liked working on the layout of websites and apps. But soon after I discovered 
                                 that I also really love working with (Vanilla) JavaScript, so I keep learning and 
-                                improving myself in it 
+                                improving myself in it.
                             </p>
                             <p class="alinea"></p>
                             <p class="text_part">
@@ -128,7 +128,7 @@ const createPersonalInfo = () => {
                                 I started with learning the basics of frameworks in general. Every company prefers a 
                                 different one, so I decide for myself, that it’s better to now first how they work, 
                                 instead of learning 1. And for now I’ve already been working with jQuery, Vue.JS, 
-                                React.JS, Redux, Node.JS,… 
+                                React.JS, Redux, Node.JS,…
                             </p>
                         </div>
                     </section>
