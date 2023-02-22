@@ -474,7 +474,9 @@ button, a {
     box-shadow: -1px -1px 2px 0 rgba(112, 112, 112, 0.2), -1px 1px 2px 0 rgba(112, 112, 112, 0.2); }
   .popup_window .contact_box,
   .popup_window .aboutme_box,
+  .popup_window .portfolio_box,
   .popup_window .hobbies_box,
+  .popup_window .address_box,
   .popup_window .skills_box,
   .popup_window .softSkills_box,
   .popup_window .languages_box,
@@ -520,6 +522,27 @@ button, a {
       border: 1px solid rgba(13, 90, 107, 0.6);
       border-right: none;
       box-shadow: inset 2px 2px 3px 0 rgba(85, 85, 85, 0.2), inset -2px -2px 3px 0 rgba(85, 85, 85, 0.2); }
+  .popup_window .aboutme_box .chapter .section .content {
+    display: flex;
+    flex-direction: row;
+    width: 94%;
+    max-width: 94%;
+    margin: 0 auto;
+    padding: .4rem 0; }
+    .popup_window .aboutme_box .chapter .section .content .text_box {
+      width: 100%;
+      max-width: 100%;
+      padding: .3rem 0; }
+      .popup_window .aboutme_box .chapter .section .content .text_box .text_part {
+        margin: .2rem 0;
+        color: #707070;
+        font-family: 'Comfortaa', cursive;
+        font-weight: 400;
+        font-size: .9rem;
+        line-height: 1.1rem;
+        text-align: justify; }
+      .popup_window .aboutme_box .chapter .section .content .text_box .alinea {
+        height: .4rem; }
   .popup_window .contact_box .chapter .section .duo_flex {
     display: flex;
     flex-direction: column;
@@ -536,13 +559,11 @@ button, a {
     margin: 0 0;
     padding: 0 0; }
   .popup_window .contact_box .chapter .section .mail,
-  .popup_window .contact_box .chapter .section .phone,
-  .popup_window .contact_box .chapter .section .linkedin,
-  .popup_window .contact_box .chapter .section .portfolio {
+  .popup_window .contact_box .chapter .section .linkedin {
     margin: .8rem 0 0 0; }
   .popup_window .contact_box .chapter .section .sub_title {
-    width: 5rem;
-    max-width: 5rem;
+    width: 100%;
+    max-width: 100%;
     margin: 0 0 .4rem 0;
     color: #0c7b85;
     font-size: 1rem;
@@ -594,7 +615,32 @@ button, a {
       box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3); }
       .popup_window .contact_box .chapter .section .btn:hover button a {
         color: white; }
-  .popup_window .contact_box .chapter .section .phone_button {
+  .popup_window .portfolio_box .chapter .section .duo_flex {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    max-width: 94%;
+    margin: .2rem auto;
+    padding: 0 0; }
+  .popup_window .portfolio_box .chapter .section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    padding: 0 0; }
+  .popup_window .portfolio_box .chapter .section .portfolio {
+    margin: .8rem 0 0 0; }
+  .popup_window .portfolio_box .chapter .section .sub_title {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 .4rem 0;
+    color: #0c7b85;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px; }
+  .popup_window .portfolio_box .chapter .section .btn {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -603,49 +649,43 @@ button, a {
     height: 1.8rem;
     margin: 0 0;
     padding: 0 0; }
-    .popup_window .contact_box .chapter .section .phone_button .gsm {
-      width: 50%;
-      max-width: 50%; }
-      .popup_window .contact_box .chapter .section .phone_button .gsm button {
-        border-right: 1px solid rgba(13, 90, 107, 0.6);
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px; }
-    .popup_window .contact_box .chapter .section .phone_button .home {
-      width: 50%;
-      max-width: 50%; }
-      .popup_window .contact_box .chapter .section .phone_button .home button {
-        border-left: none;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px; }
-  .popup_window .contact_box .chapter .section .text_box {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0; }
-    .popup_window .contact_box .chapter .section .text_box p {
-      margin: 0 .4rem .2rem 0; }
-  .popup_window .contact_box .chapter .section .phones {
-    flex-direction: row; }
-  .popup_window .aboutme_box .chapter .section .content {
-    display: flex;
-    flex-direction: row;
-    width: 94%;
-    max-width: 94%;
-    margin: 0 auto;
-    padding: .4rem 0; }
-    .popup_window .aboutme_box .chapter .section .content .text_box {
+    .popup_window .portfolio_box .chapter .section .btn button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       width: 100%;
       max-width: 100%;
-      padding: .3rem 0; }
-      .popup_window .aboutme_box .chapter .section .content .text_box .text_part {
-        margin: .2rem 0;
-        color: #707070;
+      height: 1.8rem;
+      margin: 0 0;
+      padding: 0 0;
+      outline: none;
+      color: #484848;
+      background: rgba(13, 90, 107, 0.5);
+      background: linear-gradient(180deg, rgba(13, 90, 107, 0.48) 0%, rgba(12, 123, 133, 0.44) 35%, rgba(12, 123, 133, 0.44) 70%, rgba(13, 90, 107, 0.48) 100%);
+      border: 1px solid rgba(12, 123, 133, 0.4);
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3); }
+      .popup_window .portfolio_box .chapter .section .btn button a {
+        width: 100%;
+        height: 1.8rem;
+        padding: .3rem 0 0 0;
+        color: #555555;
         font-family: 'Comfortaa', cursive;
-        font-weight: 400;
-        font-size: .9rem;
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
         line-height: 1.1rem;
-        text-align: justify; }
-      .popup_window .aboutme_box .chapter .section .content .text_box .alinea {
-        height: .4rem; }
+        text-align: center;
+        text-decoration: none; }
+    .popup_window .portfolio_box .chapter .section .btn:hover button {
+      color: white;
+      background: #0d5a6b;
+      background: linear-gradient(180deg, #0d5a6b 0%, #0c7b85 35%, #0c7b85 70%, #0d5a6b 100%);
+      border: 1px solid rgba(13, 90, 107, 0.6);
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3); }
+      .popup_window .portfolio_box .chapter .section .btn:hover button a {
+        color: white; }
   .popup_window .hobbies_box .chapter .section .content {
     display: flex;
     flex-direction: column;
@@ -675,6 +715,106 @@ button, a {
         font-weight: 400;
         text-align: left;
         line-height: 1.1rem; }
+  .popup_window .address_box .chapter .section .duo_flex {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    max-width: 94%;
+    margin: .2rem auto;
+    padding: 0 0; }
+  .popup_window .address_box .chapter .section .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    padding: 0 0; }
+  .popup_window .address_box .chapter .section .text_box {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0; }
+    .popup_window .address_box .chapter .section .text_box p {
+      margin: 0 .4rem .2rem 0; }
+    .popup_window .address_box .chapter .section .text_box .street,
+    .popup_window .address_box .chapter .section .text_box .town {
+      margin: 0 0 .6rem 0; }
+  .popup_window .address_box .chapter .section .btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    height: 1.8rem;
+    margin: 0 0;
+    padding: 0 0; }
+    .popup_window .address_box .chapter .section .btn button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      height: 1.8rem;
+      margin: 0 0;
+      padding: 0 0;
+      outline: none;
+      color: #484848;
+      background: rgba(13, 90, 107, 0.5);
+      background: linear-gradient(180deg, rgba(13, 90, 107, 0.48) 0%, rgba(12, 123, 133, 0.44) 35%, rgba(12, 123, 133, 0.44) 70%, rgba(13, 90, 107, 0.48) 100%);
+      border: 1px solid rgba(12, 123, 133, 0.4);
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3); }
+      .popup_window .address_box .chapter .section .btn button a {
+        width: 100%;
+        height: 1.8rem;
+        padding: .3rem 0 0 0;
+        color: #555555;
+        font-family: 'Comfortaa', cursive;
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 1.1rem;
+        text-align: center;
+        text-decoration: none; }
+  .popup_window .address_box .chapter .section .gsm {
+    width: 50%;
+    max-width: 50%; }
+    .popup_window .address_box .chapter .section .gsm button {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
+    .popup_window .address_box .chapter .section .gsm:hover button {
+      color: white;
+      background: #0d5a6b;
+      background: linear-gradient(180deg, #0d5a6b 0%, #0c7b85 35%, #0c7b85 70%, #0d5a6b 100%);
+      border: 1px solid rgba(13, 90, 107, 0.6);
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3);
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; }
+      .popup_window .address_box .chapter .section .gsm:hover button a {
+        color: white; }
+  .popup_window .address_box .chapter .section .home {
+    width: 50%;
+    max-width: 50%; }
+    .popup_window .address_box .chapter .section .home button {
+      border-left: rgba(13, 90, 107, 0.5);
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px; }
+    .popup_window .address_box .chapter .section .home:hover button {
+      color: white;
+      background: #0d5a6b;
+      background: linear-gradient(180deg, #0d5a6b 0%, #0c7b85 35%, #0c7b85 70%, #0d5a6b 100%);
+      border: 1px solid rgba(13, 90, 107, 0.6);
+      border-radius: 5px;
+      box-shadow: 1px 1px 2px 0 rgba(85, 85, 85, 0.3), -1px -1px 2px 0 rgba(85, 85, 85, 0.3);
+      border-left: 1px solid rgba(13, 90, 107, 0.6);
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px; }
+      .popup_window .address_box .chapter .section .home:hover button a {
+        color: white; }
+  .popup_window .address_box .chapter .section .phones {
+    flex-direction: row;
+    margin: .8rem 0 0 0; }
   .popup_window .skills_box .chapter .section .content {
     display: flex;
     flex-direction: column;
@@ -705,7 +845,8 @@ button, a {
       font-family: 'Comfortaa', sans-serif;
       font-size: .8rem;
       font-weight: 400;
-      text-align: left; }
+      text-align: left;
+      line-height: 1.3rem; }
     .popup_window .skills_box .chapter .section .text_box .skills_list {
       list-style: none; }
       .popup_window .skills_box .chapter .section .text_box .skills_list li {
@@ -726,6 +867,7 @@ button, a {
           font-weight: 400;
           text-align: left;
           line-height: 1.3rem; }
+  .popup_window .skills_box .chapter .section .backend_text,
   .popup_window .skills_box .chapter .section .design_text {
     margin: .2rem 0 0 0;
     padding: .2rem 0 0 0; }
@@ -818,9 +960,9 @@ button, a {
     max-width: 100%; }
     .popup_window .webSchool_box .chapter .section .sub_title_box .sub_title,
     .popup_window .artSchool_box .chapter .section .sub_title_box .sub_title {
-      width: 100px;
-      max-width: 100px;
-      margin: .15rem 0 0 0;
+      width: 110px;
+      max-width: 140px;
+      margin: .15rem .1rem 0 0;
       color: #707070;
       font-size: .8rem;
       font-weight: 400;
@@ -978,7 +1120,31 @@ button, a {
           font-weight: 500; }
 
   .mainpage .section_box {
-    margin: 5% auto 5% auto; } }
+    margin: 5% auto 5% auto; }
+  .mainpage .address_box .chapter .section .duo_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 94%;
+    max-width: 94%;
+    margin: .4rem auto .2rem auto; }
+    .mainpage .address_box .chapter .section .duo_flex .address {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto; }
+      .mainpage .address_box .chapter .section .duo_flex .address .text_box {
+        flex-direction: row; }
+        .mainpage .address_box .chapter .section .duo_flex .address .text_box .text_part {
+          margin: 0 .8rem 0 0; }
+          .mainpage .address_box .chapter .section .duo_flex .address .text_box .text_part .street,
+          .mainpage .address_box .chapter .section .duo_flex .address .text_box .text_part .town {
+            margin: 0 0; }
+      .mainpage .address_box .chapter .section .duo_flex .address .top_box {
+        margin: 0 0 .5rem 0; } }
 @media (min-width: 667px) {
   .page_header .header_content {
     height: 4.8rem; }
@@ -1015,22 +1181,42 @@ button, a {
     width: 94%;
     max-width: 94%;
     margin: .4rem auto .2rem auto; }
-  .mainpage .contact_box .chapter .section .content {
+  .mainpage .contact_box .chapter .section .mail, .mainpage .contact_box .chapter .section .linkedin {
+    width: 50%;
+    max-width: 50%;
+    margin: 0 0 0 0; }
+    .mainpage .contact_box .chapter .section .mail .btn, .mainpage .contact_box .chapter .section .linkedin .btn {
+      width: 100%;
+      max-width: 100%; }
+    .mainpage .contact_box .chapter .section .mail .mail_button button, .mainpage .contact_box .chapter .section .linkedin .mail_button button {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    .mainpage .contact_box .chapter .section .mail .linkedIn_button button, .mainpage .contact_box .chapter .section .linkedin .linkedIn_button button {
+      border-left: none;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
+      .mainpage .contact_box .chapter .section .mail .linkedIn_button button:hover, .mainpage .contact_box .chapter .section .linkedin .linkedIn_button button:hover {
+        border-left: 1px solid rgba(13, 90, 107, 0.6); }
+  .mainpage .portfolio_box .chapter .section .duo_flex {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 94%;
+    max-width: 94%;
+    margin: .4rem auto .2rem auto; }
+  .mainpage .portfolio_box .chapter .section .portfolio {
     width: 100%;
     max-width: 100%;
-    margin: .6rem auto 0 auto; }
-  .mainpage .contact_box .chapter .section .address {
-    margin: 0 auto; }
-    .mainpage .contact_box .chapter .section .address .text_box {
-      flex-direction: row; }
-      .mainpage .contact_box .chapter .section .address .text_box .text_part {
-        margin: 0 .8rem 0 0; }
-  .mainpage .contact_box .chapter .section .mail, .mainpage .contact_box .chapter .section .phone, .mainpage .contact_box .chapter .section .linkedin, .mainpage .contact_box .chapter .section .portfolio {
-    width: 48%;
-    max-width: 48%;
-    margin: 0 1rem 0 0; }
+    margin: 0 0 0 0; }
+    .mainpage .portfolio_box .chapter .section .portfolio .btn {
+      width: 100%;
+      max-width: 100%; }
+  .mainpage .address_box .chapter .section .duo_flex .address {
+    flex-direction: row; }
+    .mainpage .address_box .chapter .section .duo_flex .address .top_box {
+      margin: 0 0; }
   .mainpage .work_box .chapter .section .content .sub_title_box {
     flex-direction: row; }
     .mainpage .work_box .chapter .section .content .sub_title_box .sub_title {
@@ -1058,7 +1244,7 @@ button, a {
     max-width: 20rem; }
   .mainpage .webSchool_box .chapter .section .content .sub_title {
     width: 40%;
-    max-width: 100px; }
+    max-width: 140px; }
   .mainpage .artSchool_box .chapter .section .content .sub_title_box {
     flex-direction: row;
     width: 100%;
@@ -1079,27 +1265,30 @@ button, a {
 @media (min-width: 800px) {
   .mainpage .aboutme_box .chapter .section .content .text_box .text_part {
     line-height: 1.2rem; }
-  .mainpage .skills_box .chapter .section .content {
+  .mainpage .skills_box .chapter .section .systems,
+  .mainpage .skills_box .chapter .section .design {
     flex-direction: row;
     padding: .4rem 0 .4rem 0;
     border-bottom: 1px solid rgba(13, 90, 107, 0.2); }
-  .mainpage .skills_box .chapter .section .web, .mainpage .skills_box .chapter .section .design {
-    margin: .8rem auto .2rem auto; }
-  .mainpage .skills_box .chapter .section .design {
-    border: none; }
-  .mainpage .skills_box .chapter .section .sub_title {
-    width: 190px;
-    max-width: 190px; }
-  .mainpage .skills_box .chapter .section .text_box {
-    width: 70%;
-    max-width: 70%;
-    margin: 0 0;
-    padding: 0 0 0 0;
-    border: none; }
-    .mainpage .skills_box .chapter .section .text_box .skills_list li {
-      margin: 0 0 .3rem 0; }
+    .mainpage .skills_box .chapter .section .systems .sub_title,
+    .mainpage .skills_box .chapter .section .design .sub_title {
+      width: 190px;
+      max-width: 190px; }
+    .mainpage .skills_box .chapter .section .systems .text_box,
+    .mainpage .skills_box .chapter .section .design .text_box {
+      width: 70%;
+      max-width: 70%;
+      margin: 0 0;
+      padding: 0 0 0 0;
+      border: none; }
+      .mainpage .skills_box .chapter .section .systems .text_box .skills_list li,
+      .mainpage .skills_box .chapter .section .design .text_box .skills_list li {
+        margin: 0 0 .3rem 0; }
   .mainpage .skills_box .chapter .section .systems .text_box {
-    margin: 0 0 0 .1rem; } }
+    margin: 0 0 0 .1rem; }
+  .mainpage .skills_box .chapter .section .design {
+    margin: .8rem auto .2rem auto;
+    border-bottom: none; } }
 @media (min-width: 844px) {
   .page_header .header_content .header_flex .page_title {
     width: 64%;
@@ -1149,6 +1338,9 @@ button, a {
         .page_header .header_content .header_flex .page_subtitle .cv {
           margin: .7rem 0 0 .4rem; }
 
+  .mainpage .aboutme_box .chapter .section .content .text_box .text_part {
+    font-size: .95rem;
+    line-height: 1.3rem; }
   .mainpage .contact_box .chapter .section .duo_flex {
     display: flex;
     flex-direction: row;
@@ -1164,21 +1356,27 @@ button, a {
     width: 100%;
     max-width: 100%;
     margin: .6rem auto 0 auto; }
-  .mainpage .contact_box .chapter .section .address {
-    margin: 0 auto; }
-    .mainpage .contact_box .chapter .section .address .text_box {
-      flex-direction: row; }
-      .mainpage .contact_box .chapter .section .address .text_box .text_part {
-        margin: 0 .8rem 0 0; }
-  .mainpage .contact_box .chapter .section .mail, .mainpage .contact_box .chapter .section .phone, .mainpage .contact_box .chapter .section .linkedin, .mainpage .contact_box .chapter .section .portfolio {
-    width: 48%;
-    max-width: 48%;
-    margin: 0 1rem 0 0; }
-  .mainpage .aboutme_box .chapter .section .content .text_box .text_part {
-    font-size: .95rem;
-    line-height: 1.3rem; }
   .mainpage .hobbies_box .chapter .section .content .hobby_list li .list_text {
     font-size: .95rem; }
+  .mainpage .address_box .chapter .section .duo_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 94%;
+    max-width: 94%;
+    margin: .4rem auto .2rem auto; }
+  .mainpage .address_box .chapter .section .address {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; }
+    .mainpage .address_box .chapter .section .address .text_box {
+      flex-direction: row; }
+      .mainpage .address_box .chapter .section .address .text_box .text_part {
+        margin: 0 .8rem 0 0; }
   .mainpage .skills_box .chapter .section .content .sub_title {
     font-size: 1.05rem; }
   .mainpage .skills_box .chapter .section .content .text_box .text_part {
@@ -1193,8 +1391,8 @@ button, a {
   .mainpage .languages_box .chapter .section .content .languages_table td p {
     font-size: .95rem; }
   .mainpage .webSchool_box .chapter .section .content .sub_title_box .sub_title {
-    width: 116px;
-    max-width: 116px;
+    width: 140px;
+    max-width: 140px;
     font-size: 1rem; }
   .mainpage .webSchool_box .chapter .section .content .sub_title_box .school_name {
     width: 170px;

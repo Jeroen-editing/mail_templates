@@ -587,7 +587,9 @@ button, a {
     }
     .contact_box,
     .aboutme_box,
+    .portfolio_box,
     .hobbies_box,
+    .address_box,
     .skills_box,
     .softSkills_box,
     .languages_box,
@@ -640,6 +642,39 @@ button, a {
             box-shadow: $insetShadow;
         }
     }
+    .aboutme_box {
+        .chapter {
+            .section {
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    width: 94%;
+                    max-width: 94%;
+                    margin: 0 auto;
+                    padding: .4rem 0;
+
+                    .text_box {
+                        width: 100%;
+                        max-width: 100%;
+                        padding: .3rem 0;
+
+                        .text_part {
+                            margin: .2rem 0;
+                            color: $gray;
+                            font-family: 'Comfortaa', cursive;
+                            font-weight: 400;
+                            font-size: .9rem;
+                            line-height: 1.1rem;
+                            text-align: justify;
+                        }
+                        .alinea {
+                            height: .4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .contact_box {
         .chapter {
             .section {
@@ -661,14 +696,12 @@ button, a {
                     padding: 0 0;
                 }
                 .mail,
-                .phone,
-                .linkedin,
-                .portfolio {
+                .linkedin {
                     margin: .8rem 0 0 0;
                 }
                 .sub_title {
-                    width: 5rem;
-                    max-width: 5rem;
+                    width: 100%;
+                    max-width: 100%;
                     margin: 0 0 .4rem 0;
                     color: $green;
                     font-size: 1rem;
@@ -721,7 +754,42 @@ button, a {
                         }
                     }
                 }
-                .phone_button {
+            }
+        }
+    }
+    .portfolio_box {
+        .chapter {
+            .section {
+                .duo_flex {
+                    display: flex;
+                    flex-direction: column;
+                    width: 94%;
+                    max-width: 94%;
+                    margin: .2rem auto;
+                    padding: 0 0;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 0;
+                    padding: 0 0;
+                }
+                .portfolio {
+                    margin: .8rem 0 0 0;
+                }
+                .sub_title {
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 0 .4rem 0;
+                    color: $green;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    letter-spacing: 2px;
+                }
+                .btn {
                     display: flex;
                     flex-direction: row;
                     justify-content: center;
@@ -731,69 +799,39 @@ button, a {
                     margin: 0 0;
                     padding: 0 0;
 
-                    .gsm {
-                        width: 50%;
-                        max-width: 50%;
-
-                        button {
-                            border-right: $darkBorder;
-                            border-top-right-radius: 0px;
-                            border-bottom-right-radius: 0px;
-                        }
-                    }
-                    .home {
-                        width: 50%;
-                        max-width: 50%;
-
-                        button {
-                            border-left: none;
-                            border-top-left-radius: 0px;
-                            border-bottom-left-radius: 0px;
-                        }
-                    }
-                }
-                .text_box {
-                    display: flex;
-                    flex-direction: column;
-                    margin: 0 0;
-
-                    p {
-                        margin: 0 .4rem .2rem 0;
-                    }
-                }
-                .phones {
-                    flex-direction: row;
-                }
-            }
-        }
-    }
-    .aboutme_box {
-        .chapter {
-            .section {
-                .content {
-                    display: flex;
-                    flex-direction: row;
-                    width: 94%;
-                    max-width: 94%;
-                    margin: 0 auto;
-                    padding: .4rem 0;
-
-                    .text_box {
+                    button {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
                         width: 100%;
                         max-width: 100%;
-                        padding: .3rem 0;
+                        height: 1.8rem;
+                        margin: 0 0;
+                        padding: 0 0;
+                        outline: none;
+                        @include button();
 
-                        .text_part {
-                            margin: .2rem 0;
-                            color: $gray;
+                        a {
+                            width: 100%;
+                            height: 1.8rem;
+                            padding: .3rem 0 0 0;
+                            color: $darkgray;
                             font-family: 'Comfortaa', cursive;
-                            font-weight: 400;
-                            font-size: .9rem;
+                            font-size: .8rem;
+                            font-weight: 600;
+                            letter-spacing: 1px;
                             line-height: 1.1rem;
-                            text-align: justify;
+                            text-align: center;
+                            text-decoration: none;
                         }
-                        .alinea {
-                            height: .4rem;
+                    }
+                    &:hover {
+                        button {
+                            @include buttonHover();
+    
+                            a {
+                                color: white;
+                            }
                         }
                     }
                 }
@@ -842,6 +880,128 @@ button, a {
             }
         }
     }
+    .address_box {
+        .chapter {
+            .section {
+                .duo_flex {
+                    display: flex;
+                    flex-direction: column;
+                    width: 94%;
+                    max-width: 94%;
+                    margin: .2rem auto;
+                    padding: 0 0;
+                }
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 0;
+                    padding: 0 0;
+                }
+                .text_box {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 0;
+
+                    p {
+                        margin: 0 .4rem .2rem 0;
+                    }
+                    .street,
+                    .town {
+                        margin: 0 0 .6rem 0;
+                    }
+                }
+                .btn {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 500px;
+                    height: 1.8rem;
+                    margin: 0 0;
+                    padding: 0 0;
+
+                    button {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        width: 100%;
+                        max-width: 100%;
+                        height: 1.8rem;
+                        margin: 0 0;
+                        padding: 0 0;
+                        outline: none;
+                        @include button();
+
+                        a {
+                            width: 100%;
+                            height: 1.8rem;
+                            padding: .3rem 0 0 0;
+                            color: $darkgray;
+                            font-family: 'Comfortaa', cursive;
+                            font-size: .8rem;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                            line-height: 1.1rem;
+                            text-align: center;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .gsm {
+                    width: 50%;
+                    max-width: 50%;
+
+                    button {
+                        //border-right: $darkBorder;
+                        border-top-right-radius: 0px;
+                        border-bottom-right-radius: 0px;
+                    }
+                    &:hover {
+                        button {
+                            @include buttonHover();
+                            //border-right: $darkBorder;
+                            border-top-right-radius: 0px;
+                            border-bottom-right-radius: 0px;
+    
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .home {
+                    width: 50%;
+                    max-width: 50%;
+
+                    button {
+                        border-left: rgba($darkgreen, .5);
+                        border-top-left-radius: 0px;
+                        border-bottom-left-radius: 0px;
+                    }
+                    &:hover {
+                        button {
+                            @include buttonHover();
+                            //border-left: none;
+                            border-left: $darkBorder;
+                            border-top-left-radius: 0px;
+                            border-bottom-left-radius: 0px;
+    
+                            a {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .phones {
+                    flex-direction: row;
+                    margin: .8rem 0 0 0;
+                }
+            }
+        }
+    }
     .skills_box {
         .chapter {
             .section {
@@ -878,7 +1038,8 @@ button, a {
                         font-family: 'Comfortaa', sans-serif;
                         font-size: .8rem;
                         font-weight: 400;
-                        text-align: left;     
+                        text-align: left;
+                        line-height: 1.3rem;    
                     }
                     .skills_list {
                         list-style: none;
@@ -907,6 +1068,7 @@ button, a {
                         }
                     }
                 }
+                .backend_text,
                 .design_text {
                     margin: .2rem 0 0 0;
                     padding: .2rem 0 0 0;
@@ -1037,9 +1199,9 @@ button, a {
                     max-width: 100%;
 
                     .sub_title {
-                        width: 100px;
-                        max-width: 100px;
-                        margin: .15rem 0 0 0;
+                        width: 110px;
+                        max-width: 140px;
+                        margin: .15rem .1rem 0 0;
                         color: $gray;
                         font-size: .8rem;
                         font-weight: 400;
@@ -1267,6 +1429,42 @@ button, a {
         .section_box {
             margin: 5% auto 5% auto;
         }
+        .address_box .chapter .section {
+            .duo_flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 94%;
+                max-width: 94%;
+                margin: .4rem auto .2rem auto;
+
+                .address {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    max-width: 100%;
+                    margin: 0 auto;
+    
+                    .text_box {
+                        flex-direction: row;
+    
+                        .text_part {
+                            margin: 0 .8rem 0 0;
+
+                            .street,
+                            .town {
+                                margin: 0 0;
+                            }
+                        }
+                    }
+                    .top_box {
+                        margin: 0 0 .5rem 0;
+                    }
+                }
+            }
+        }
     }
 }
 @media (min-width: 667px) {
@@ -1321,28 +1519,59 @@ button, a {
                 max-width: 94%;
                 margin: .4rem auto .2rem auto;
             }
-            .content {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                max-width: 100%;
-                margin: .6rem auto 0 auto;
-            }
-            .address {
-                margin: 0 auto;
+            .mail, .linkedin {
+                width: 50%;
+                max-width: 50%;
+                margin: 0 0 0 0;
 
-                .text_box {
-                    flex-direction: row;
+                .btn {
+                    width: 100%;
+                    max-width: 100%;
+                }
+                .mail_button button {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                .linkedIn_button button {
+                    border-left: none;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
 
-                    .text_part {
-                        margin: 0 .8rem 0 0;
+                    &:hover  {
+                        border-left: $darkBorder;
                     }
                 }
             }
-            .mail, .phone, .linkedin, .portfolio {
-                width: 48%;
-                max-width: 48%;
-                margin: 0 1rem 0 0;
+        }
+        .portfolio_box .chapter .section {
+            .duo_flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 94%;
+                max-width: 94%;
+                margin: .4rem auto .2rem auto;
+            }
+            .portfolio {
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 0 0;
+
+                .btn {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .address_box .chapter .section {
+            .duo_flex .address {
+                flex-direction: row;
+                
+                .top_box {
+                    margin: 0 0;
+                }
             }
         }
         .work_box .chapter .section {
@@ -1389,7 +1618,7 @@ button, a {
             }
             .sub_title {
                 width: 40%;
-                max-width: 100px;
+                max-width: 140px;
             }
         }
         .artSchool_box .chapter .section .content {
@@ -1427,36 +1656,36 @@ button, a {
             line-height: 1.2rem;
         }
         .skills_box .chapter .section {
-            .content {
+            .systems,
+            .design {
                 flex-direction: row;
                 padding: .4rem 0 .4rem 0;
                 border-bottom: 1px solid rgba($darkgreen, .2);
-            }
-            .web, .design {
-                margin: .8rem auto .2rem auto;
-            }
-            .design {
-                border: none;
-            }
-            .sub_title {
-                width: 190px;
-                max-width: 190px;
-            }
-            .text_box {
-                width: 70%;
-                max-width: 70%;
-                margin: 0 0;
-                padding: 0 0 0 0;
-                border: none;
 
-                .skills_list li {
-                    margin: 0 0 .3rem 0;
+                .sub_title {
+                    width: 190px;
+                    max-width: 190px;
+                }
+                .text_box {
+                    width: 70%;
+                    max-width: 70%;
+                    margin: 0 0;
+                    padding: 0 0 0 0;
+                    border: none;
+    
+                    .skills_list li {
+                        margin: 0 0 .3rem 0;
+                    }
                 }
             }
             .systems {
                 .text_box {
                     margin: 0 0 0 .1rem;
                 }
+            }
+            .design {
+                margin: .8rem auto .2rem auto;
+                border-bottom: none;
             }
         }
     }
@@ -1546,6 +1775,10 @@ button, a {
         }
     }
     .mainpage {
+        .aboutme_box .chapter .section .content .text_box .text_part {
+            font-size: .95rem;
+            line-height: 1.3rem;
+        }
         .contact_box .chapter .section {
             .duo_flex {
                 display: flex;
@@ -1564,7 +1797,26 @@ button, a {
                 max-width: 100%;
                 margin: .6rem auto 0 auto;
             }
+        }
+        .hobbies_box .chapter .section .content .hobby_list li .list_text {
+            font-size: .95rem;
+        }
+        .address_box .chapter .section {
+            .duo_flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                align-content: flex-start;
+                width: 94%;
+                max-width: 94%;
+                margin: .4rem auto .2rem auto;
+            }
             .address {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 100%;
                 margin: 0 auto;
 
                 .text_box {
@@ -1575,18 +1827,6 @@ button, a {
                     }
                 }
             }
-            .mail, .phone, .linkedin, .portfolio {
-                width: 48%;
-                max-width: 48%;
-                margin: 0 1rem 0 0;
-            }
-        }
-        .aboutme_box .chapter .section .content .text_box .text_part {
-            font-size: .95rem;
-            line-height: 1.3rem;
-        }
-        .hobbies_box .chapter .section .content .hobby_list li .list_text {
-            font-size: .95rem;
         }
         .skills_box .chapter .section .content {
             .sub_title {
@@ -1616,8 +1856,8 @@ button, a {
         .webSchool_box .chapter .section .content {
             .sub_title_box {
                 .sub_title {
-                    width: 116px;
-                    max-width: 116px;
+                    width: 140px;
+                    max-width: 140px;
                     font-size: 1rem;
                 }
                 .school_name {

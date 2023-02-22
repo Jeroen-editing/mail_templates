@@ -28,82 +28,6 @@ let info_element = getById('info_section');
 const createPersonalInfo = () => {
     const personalInfo = new Chapter();
 
-    const contact_content = `
-    <article class="contact_box">
-        <div class="chapter">
-            <header class="section_title">
-                <h3 class="contact_title">
-                    Contact Info
-                </h3>
-            </header>
-            <section class="section contact_section">
-                <div class="duo_flex">
-                    <section class="content address">
-                        <h4 class="sub_title">
-                            Address
-                        </h4>
-                        <div class="text_box">
-                            <p class="text_part">Volkstraat 1,</p>
-                            <p class="text_part">2000 Antwerp,</p>
-                            <p class="text_part">Antwerp Belgium</p>
-                        </div>
-                    </section>
-                </div>
-                <div class="duo_flex">
-                    <section class="content mail">
-                        <h4 class="sub_title">
-                            Email
-                        </h4>
-                        <div class="mail_button btn">
-                            <button>
-                                <a href="mailto:jdv.editing@gmail.com">jdv.editing@...</a>
-                            </button>
-                        </div>
-                    </section>
-                    <section class="content phone">
-                        <h4 class="sub_title">
-                            Phone
-                        </h4>
-                        <div class="phone_button">
-                            <div class="gsm btn">
-                                <button>
-                                    <a href="tel:+32485577391" class="tel_link">smartphone</a>
-                                </button>
-                            </div>
-                            <div class="home btn">
-                                <button>
-                                    <a href="tel:+3234306079" class="tel_link">home</a>
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="duo_flex">
-                    <section class="content linkedin">
-                        <h4 class="sub_title">
-                            LinkedIn
-                        </h4>
-                        <div class="linkedIn_button btn">
-                            <button>
-                                <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/">https://www.linkedin...</a>
-                            </button>
-                        </div>
-                    </section>
-                    <section class="content portfolio">
-                        <h4 class="sub_title">
-                            Portfolio
-                        </h4>
-                        <div class="portfolio_button btn">
-                            <button>
-                                <a href="https://jeroen-editing.github.io/Portfolio/">https://www....Portfolio</a>
-                            </button>
-                        </div>
-                    </section>
-                </div>
-            </section>
-        </div>
-    </article>`;
-
     const aboutMe_content = `
         <article class="aboutme_box">
             <div class="chapter">
@@ -116,22 +40,80 @@ const createPersonalInfo = () => {
                     <section class="content aboutme">
                         <div class="text_box">
                             <p class="text_part">
-                                In 2019 I had to make a choice in my career and after some research I started studying 
-                                web development. Because I have a graphical history, in the beginning I obviously most 
-                                of all liked working on the layout of websites and apps. But soon after I discovered 
-                                that I also really love working with (Vanilla) JavaScript, so I keep learning and 
-                                improving myself in it.
+                                In 2019 I started studying web development, because I wanted a change in my career. 
+                                To get the most out of my study period, I followed a fulltime course and evening 
+                                school at the same time. I even learned double as much on my own online. And because 
+                                my interest in web development is still growing, I keep learning and improving myself.
                             </p>
                             <p class="alinea"></p>
                             <p class="text_part">
-                                We didn’t learn ES6 in my courses, so of course I had to do that first. And afterwards 
-                                I started with learning the basics of frameworks in general. Every company prefers a 
-                                different one, so I decide for myself, that it’s better to now first how they work, 
-                                instead of learning 1. And for now I’ve already been working with jQuery, Vue.JS, 
-                                React.JS, Redux, Node.JS,…
+                                Although I’m already a bit older as the average junior developer, I’m certain some 
+                                employers can value an adult attitude and reliability. This is a second chance for 
+                                me after all, so I will never take that for granted. And that only motivates me 
+                                uttermost, to keep studying and working nearly every 
                             </p>
                         </div>
                     </section>
+                </section>
+            </div>
+        </article>`;
+
+    const contact_content = `
+    <article class="contact_box">
+        <div class="chapter">
+            <header class="section_title">
+                <h3 class="contact_title">
+                    Contact Info
+                </h3>
+            </header>
+            <section class="section contact_section">
+                <div class="duo_flex">
+                    <section class="content mail">
+                        <h4 class="sub_title">
+                            Write me an email...
+                        </h4>
+                        <div class="mail_button btn">
+                            <button>
+                                <a href="mailto:jdv.editing@gmail.com">jdv.editing@...</a>
+                            </button>
+                        </div>
+                    </section>
+                    <section class="content linkedin">
+                        <h4 class="sub_title">
+                            Go to my LinkedIn profile...
+                        </h4>
+                        <div class="linkedIn_button btn">
+                            <button>
+                                <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/" target="_blank">https://www.linkedin...</a>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </article>`;
+
+    const portfolio_content = `
+        <article class="portfolio_box">
+            <div class="chapter">
+                <header class="section_title">
+                    <h3 class="aboutme_title">
+                        Portfolio
+                    </h3>
+                </header>
+                <section class="section portfolio_section">
+                    <div class="duo_flex">
+                        <section class="content portfolio">
+                            <h4 class="sub_title">
+                                Open my portfolio...
+                            </h4>
+                            <div class="portfolio_button btn">
+                                <button>
+                                    <a href="https://jeroen-editing.github.io/Portfolio/" target="_blank">https://www....Portfolio</a>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
                 </section>
             </div>
         </article>`;
@@ -175,8 +157,46 @@ const createPersonalInfo = () => {
             </div>
         </article>`;
 
+    const address_content = `
+        <article class="address_box">
+            <div class="chapter">
+                <header class="section_title">
+                    <h3 class="contact_title">
+                        Address
+                    </h3>
+                </header>
+                <section class="section address_section">
+                    <div class="duo_flex">
+                        <section class="content address">
+                            <div class="text_box top_box">
+                                <p class="text_part street">Volkstraat 1,</p>
+                                <p class="text_part town">2000, Antwerp,</p>
+                            </div>
+                            <div class="text_box">
+                                <p class="text_part">Antwerp, Belgium</p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="duo_flex">
+                        <section class="content phones">
+                            <div class="gsm btn">
+                                <button>
+                                    <a href="tel:+32485577391" class="tel_link">smartphone</a>
+                                </button>
+                            </div>
+                            <div class="home btn">
+                                <button>
+                                    <a href="tel:+3234306079" class="tel_link">homephone</a>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </article>`;
+
     personalInfo.title = `${titleClass}Personal Info</h3>${closeButton}</div>`;
-    personalInfo.content = `${contentClass}${contact_content}${aboutMe_content}${freeTime_content}</div>`;
+    personalInfo.content = `${contentClass}${aboutMe_content}${contact_content}${portfolio_content}${freeTime_content}${address_content}</div>`;
     personalInfo.pop_up = `${popupClass}${personalInfo.getTitle()}${personalInfo.getContent()}</section>`;
 
     pop_up_element.innerHTML = `${personalInfo.getPopup()}`;
@@ -206,73 +226,6 @@ openPersonalInfo.addEventListener('mouseout', () => {
 const createSkills = () => {
     const skills = new Chapter();
 
-    const pcSkills_content = `
-        <article class="skills_box">
-            <div class="chapter">
-                <header class="section_title">
-                    <h3 class="skills_title">
-                        Computer skills
-                    </h3>
-                </header>
-                <section class="section skills_section">
-                    <section class="content systems">
-                        <h4 class="sub_title">
-                            Operating systems
-                        </h4>
-                        <div class="text_box">
-                            <p class="text_part">Os-X, Linux and Windows.</p>
-                        </div>
-                    </section>
-                    <section class="content web">
-                        <h4 class="sub_title">
-                            Web development
-                        </h4>
-                        <div class="text_box">
-                            <ul class="skills_list">
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Html, CSS (with Sass and Bootstrap).</p>
-                                </li>
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">JavaScript (with Vue JS, React, Redux, jQuery and NodeJS).</p>
-                                </li>
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Basics of PHP (with Symfony).</p>
-                                </li>
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Basics of SQL.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <section class="content design">
-                        <h4 class="sub_title">
-                            Programs
-                        </h4>
-                        <div class="text_box design_text">
-                            <ul class="skills_list">
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Adobe Creative Suite (Photoshop, Illustrator, After Effects), Gimp.</p>
-                                </li>
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Final Cut Pro X, Motion, Logic Pro X,...</p>
-                                </li>
-                                <li>
-                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">FileMaker 16 & 19 (Basics)</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                </section>
-            </div>
-        </article>`;
-
     const softSkills_content = `
         <article class="softSkills_box">
             <div class="chapter">
@@ -287,7 +240,7 @@ const createSkills = () => {
                             <ul class="skills_list">
                                 <li>
                                     <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Experienced in working independently on bigger projects with different aspects and a diversity of responsibilities.</p>
+                                    <p class="list_text">Experience at working in a multidisciplinary team, with the Agile method and using SCRUM.</p>
                                 </li>
                                 <li>
                                     <img src="assets/cv/square.png" class="list_square" alt="list square">
@@ -295,7 +248,104 @@ const createSkills = () => {
                                 </li>
                                 <li>
                                     <img src="assets/cv/square.png" class="list_square" alt="list square">
-                                    <p class="list_text">Experience with working in a multidisciplinary team.</p>
+                                    <p class="list_text">Experienced in working independently on bigger projects with different aspects and in 
+                                    a diversity of responsibilities.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </article>`;
+
+    const developSkills_content = `
+        <article class="skills_box">
+            <div class="chapter">
+                <header class="section_title">
+                    <h3 class="skills_title">
+                        Developing skills
+                    </h3>
+                </header>
+                <section class="section skills_section">
+                    <section class="content web">
+                        <h4 class="sub_title">
+                            Front end
+                        </h4>
+                        <div class="text_box">
+                            <ul class="skills_list">
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Html, CSS, Sass and Bootstrap.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">JavaScript, Vue JS, React, Redux, jQuery and NodeJS.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4 class="sub_title">
+                            Back end
+                        </h4>
+                        <div class="text_box backend_text">
+                            <ul class="skills_list">
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Basics of PHP (with Symfony).</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Basics of SQL.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </article>`;
+
+    const pcSkills_content = `
+        <article class="skills_box">
+            <div class="chapter">
+                <header class="section_title">
+                    <h3 class="skills_title">
+                        Computer skills
+                    </h3>
+                </header>
+                <section class="section skills_section">
+                    <section class="content systems">
+                        <h4 class="sub_title">
+                            Operating systems
+                        </h4>
+                        <div class="text_box">
+                            <p class="text_part">OS-X, Linux (Ubuntu) and Windows.</p>
+                        </div>
+                    </section>
+                    <section class="content design">
+                        <h4 class="sub_title">
+                            Programs
+                        </h4>
+                        <div class="text_box design_text">
+                            <ul class="skills_list">
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Adobe Creative Suite (Photoshop, Illustrator, After Effects, ...) and Gimp.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Final Cut Pro X, Motion, Logic Pro X, ...</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">FileMaker 16 & 19 (Basics).</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Access, Excel, Word, Power Point and similar programs for OS-X and Linux.</p>
+                                </li>
+                                <li>
+                                    <img src="assets/cv/square.png" class="list_square" alt="list square">
+                                    <p class="list_text">Firefox, Chrome, Opera, Opera GX, Vivaldi, Brave and Safari 
+                                    (+ the developers tools in all of them).</p>
                                 </li>
                             </ul>
                         </div>
@@ -336,7 +386,7 @@ const createSkills = () => {
         </article>`;
 
     skills.title =  `${titleClass}Skills</h3>${closeButton}</div>`;
-    skills.content = `${contentClass}${pcSkills_content}${softSkills_content}${languages_content}</div>`;
+    skills.content = `${contentClass}${softSkills_content}${developSkills_content}${pcSkills_content}${languages_content}</div>`;
     skills.pop_up = `${ popupClass}${skills.getTitle()}${skills.getContent()}</section>`;
 
     pop_up_element.innerHTML = `${skills.getPopup()}`;
@@ -376,6 +426,30 @@ const createEducation = () => {
                     </h3>
                 </header>
                 <section class="section courses_section">
+                    <section class="content online">
+                        <div class="sub_title_box">
+                            <h4 class="sub_title">
+                                Dec. 2022 - ...
+                            </h4>
+                            <h5 class="school_name">Online courses</h5>
+                        </div>
+                        <div class="text_box">
+                            <p class="text_part">Java.</p>
+                            <p class="text_part">Mainly Codegym and Codecademy.</p>
+                        </div>
+                    </section>
+                    <section class="content online">
+                        <div class="sub_title_box">
+                            <h4 class="sub_title">
+                                2021 - 2022
+                            </h4>
+                            <h5 class="school_name">Online courses</h5>
+                        </div>
+                        <div class="text_box">
+                            <p class="text_part">JavaScript, Vue JS, React, Redux, jQuery and NodeJS.</p>
+                            <p class="text_part">Mainly Codecademy and freeCodeCamp.</p>
+                        </div>
+                    </section>
                     <section class="content becode">
                         <div class="sub_title_box">
                             <h4 class="sub_title">
@@ -384,7 +458,8 @@ const createEducation = () => {
                             <h5 class="school_name">Becode Antwerp</h5>
                         </div>
                         <div class="text_box">
-                            <p class="text_part">Intensive practical course. Html, CSS, Bootstrap, Sass, JavaScript, MVC, PHP, SQL and Symfony.</p>
+                            <p class="text_part">Html, CSS, Bootstrap, Sass, JavaScript, MVC, PHP, SQL and Symfony.</p>
+                            <p class="text_part">Intensive practical course.</p>
                         </div>
                     </section>
                     <section class="content encora">
@@ -395,17 +470,19 @@ const createEducation = () => {
                             <h5 class="school_name">ENCORA Berchem</h5>
                         </div>
                         <div class="text_box">
-                            <p class="text_part">Evening classes. JavaScript, SQL and PHP.</p>
+                            <p class="text_part">JavaScript, SQL and PHP.</p>
+                            <p class="text_part">Evening classes.</p>
                         </div>
                     </section>
                     <section class="content online">
                         <div class="sub_title_box">
                             <h4 class="sub_title">
-                                2018 - ...
+                                2018 - 2021
                             </h4>
                             <h5 class="school_name">Online courses</h5>
                         </div>
                         <div class="text_box">
+                            <p class="text_part">Html, CSS, Sass, JavaScript.</p>
                             <p class="text_part">Mainly TheOdinProject, Codecademy and freeCodeCamp.</p>
                         </div>
                     </section>
@@ -414,10 +491,11 @@ const createEducation = () => {
                             <h4 class="sub_title">
                                 2016 - 2018
                             </h4>
-                            <h5 class="school_name">Computer science</h5>
+                            <h5 class="school_name">Online courses</h5>
                         </div>
                         <div class="text_box">
                             <p class="text_part">Data analytics and programming logic.</p>
+                            <p class="text_part">V.D.A.B. online courses.</p>
                         </div>
                     </section>
                 </section>
