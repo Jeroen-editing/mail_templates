@@ -50,7 +50,7 @@ const createPersonalInfo = () => {
                                 Although I’m already a bit older as the average junior developer, I’m certain some 
                                 employers can value an adult attitude and reliability. This is a second chance for 
                                 me after all, so I will never take that for granted. And that only motivates me 
-                                uttermost, to keep studying and working nearly every 
+                                uttermost, to keep studying and working nearly every day.
                             </p>
                         </div>
                     </section>
