@@ -206,6 +206,7 @@ body {
         font-family: 'Jura', sans-serif;
         font-size: 1.3rem;
         font-weight: 700;
+        text-align: center;
         text-shadow: 0 0 3px white; }
       .header_content .header_flex .page_title .function {
         width: 96%;
@@ -372,13 +373,15 @@ body {
             padding: 0 0 .6rem 0;
             font-size: .8rem; }
           .main .article .letter_box .letter .text .cv_link,
-          .main .article .letter_box .letter .text .portfolio_link {
+          .main .article .letter_box .letter .text .portfolio_link,
+          .main .article .letter_box .letter .text .stage_link {
             color: rgba(5, 142, 192, 0.8);
             color: #058ec0;
             font-weight: 600;
             text-decoration: none; }
             .main .article .letter_box .letter .text .cv_link:hover,
-            .main .article .letter_box .letter .text .portfolio_link:hover {
+            .main .article .letter_box .letter .text .portfolio_link:hover,
+            .main .article .letter_box .letter .text .stage_link:hover {
               color: #ffb805; }
         .main .article .letter_box .letter .greatings {
           width: 94%;

@@ -258,6 +258,7 @@ body {
                 font-family: 'Jura', sans-serif;
                 font-size: 1.3rem;
                 font-weight: 700;
+                text-align: center;
                 text-shadow: 0 0 3px rgb(255, 255, 255);
             }
             .function {
@@ -448,7 +449,8 @@ body {
                         font-size: .8rem;
                     }
                     .cv_link,
-                    .portfolio_link {
+                    .portfolio_link,
+                    .stage_link {
                         color: rgba($linkColor,.8);
                         color: $linkColor;
                         font-weight: 600;
